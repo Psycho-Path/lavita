@@ -43,6 +43,7 @@
             <td><select name="type">
                 <option disabled <?php if($newForm) echo "selected"?>>--Выберите тип раздела--</option>
                 <option value="WithoutContent" <?php if(!$newForm && $section->getType() == "WithoutContent") echo "selected"?>>Раздел без контента</option>
+                <option value="WithUniqueContent" <?php if(!$newForm && $section->getType() == "WithUniqueContent") echo "selected"?>>Раздел с кникальным HTML-контентом</option>
                 <option value="WithHTMLContent" <?php if(!$newForm && $section->getType() == "WithHTMLContent") echo "selected"?>>Раздел с типовым HTML-контентом</option>
                 <option value="WithListContent" <?php if(!$newForm && $section->getType() == "WithListContent") echo "selected"?>>Раздел со списком подразделов</option>
             </select></td>

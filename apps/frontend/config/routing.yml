@@ -6,6 +6,19 @@ homepage:
   url:   /
   param: { module: main, action: index }
 
+first_level_section:
+  url:  /:slug
+  param: { module: main, action: section }
+
+second_level_section:
+  url:  /:slug/:sub_slug
+  param: { module: main, action: section }
+
+third_level_section:
+  url:  /:slug/:sub_slug/:sub_sub_slug
+  param: { module: main, action: section }
+
+
 # generic rules
 # please, remove them by adding more specific rules
 #default_index:

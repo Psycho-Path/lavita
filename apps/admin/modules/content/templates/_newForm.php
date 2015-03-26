@@ -1,3 +1,4 @@
+<?php if($section->getType() == "WithHTMLContent"): ?>
 <script language="JavaScript">
     tinyMCE.init(
         {
@@ -8,6 +9,7 @@
         }
     );
 </script>
+<?php endif; ?>
 
 <?php
 
@@ -42,7 +44,7 @@
             <?php endif;?>
         </tr>
         <tr>
-            <td class="sections-form-description">Отобразить на сайте:&nbsp</td>
+            <td class="sections-form-description">Содержание:&nbsp</td>
             <td><textarea rows="10" cols="45" name="html"><?php if($content) echo $content->getHtml(); ?></textarea></td>
         </tr>
         <tr>
