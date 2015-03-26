@@ -45,12 +45,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.05033557" vertical-offset="0" max-vertical-offset="596">
+            <state vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="120">
               <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vitamin.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web_dev/js/vitamin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="9.10628" vertical-offset="0" max-vertical-offset="5745">
+              <caret line="377" column="1" selection-start-line="377" selection-start-column="1" selection-end-line="377" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,7 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apps/admin/config/view.yml" />
         <option value="$PROJECT_DIR$/apps/admin/templates/layout.php" />
         <option value="$PROJECT_DIR$/apps/admin/modules/start/actions/actions.class.php" />
         <option value="$PROJECT_DIR$/apps/admin/config/settings.yml" />
@@ -140,6 +151,7 @@
         <option value="$PROJECT_DIR$/apps/frontend/modules/main/templates/indexSuccess.php" />
         <option value="$PROJECT_DIR$/web_dev/css/css.css" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/web_dev/js/vitamin.js" />
       </list>
     </option>
   </component>
@@ -196,6 +208,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Lavita" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lavita" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lavita" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web_dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lavita" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lavita" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web_dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,13 +463,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/migration/doctrine/002_CreatedContentTableWithColumns.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2083333" vertical-offset="7" max-vertical-offset="900">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/migration/doctrine/003_GeneratedRelationsForContentTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.625" vertical-offset="45" max-vertical-offset="570">
@@ -804,9 +841,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05033557" vertical-offset="0" max-vertical-offset="596">
+        <state vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="120">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_dev/js/vitamin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.10628" vertical-offset="0" max-vertical-offset="5745">
+          <caret line="377" column="1" selection-start-line="377" selection-start-column="1" selection-end-line="377" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
