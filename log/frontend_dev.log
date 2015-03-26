@@ -1,0 +1,122 @@
+Mar 21 14:46:27 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'index',)
+Mar 21 14:46:27 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/storage/sfSessionStorage.class.php on line 93 (session_start(): Cannot send session cache limiter - headers already sent (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/config/sfRootConfigHandler.class.php:91))
+Mar 21 14:46:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 21 14:46:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 21 14:46:27 symfony [info] {mainActions} Call "mainActions->executeIndex()"
+Mar 21 14:46:27 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/modules/main/templates/indexSuccess.php"
+Mar 21 14:46:27 symfony [info] {sfPHPView} Decorate content with "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 14:46:27 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 14:46:27 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/config/sfRootConfigHandler.class.php:91))
+Mar 21 14:46:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 21 14:46:27 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/config/sfRootConfigHandler.class.php:91))
+Mar 21 14:46:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 21 14:46:27 symfony [info] {sfWebDebugLogger} Configuration 207.26 ms (9)
+Mar 21 14:46:27 symfony [info] {sfWebDebugLogger} Factories 160.09 ms (1)
+Mar 21 14:46:27 symfony [info] {sfWebDebugLogger} Action "main/index" 0.25 ms (1)
+Mar 21 14:46:27 symfony [info] {sfWebDebugLogger} View "Success" for "main/index" 42.53 ms (1)
+Mar 21 14:46:27 symfony [info] {sfWebResponse} Send content (27618 o)
+Mar 21 14:52:51 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'index',)
+Mar 21 14:52:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 21 14:52:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 21 14:52:52 symfony [info] {mainActions} Call "mainActions->executeIndex()"
+Mar 21 14:52:52 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/modules/main/templates/indexSuccess.php"
+Mar 21 14:52:52 symfony [info] {sfPHPView} Decorate content with "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 14:52:52 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 14:52:52 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 21 14:52:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 21 14:52:52 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 21 14:52:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 21 14:52:52 symfony [info] {sfWebDebugLogger} Configuration 26.30 ms (10)
+Mar 21 14:52:52 symfony [info] {sfWebDebugLogger} Factories 94.13 ms (1)
+Mar 21 14:52:52 symfony [info] {sfWebDebugLogger} Action "main/index" 0.24 ms (1)
+Mar 21 14:52:52 symfony [info] {sfWebDebugLogger} View "Success" for "main/index" 73.90 ms (1)
+Mar 21 14:52:52 symfony [info] {sfWebResponse} Send content (28605 o)
+Mar 21 14:53:50 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'index',)
+Mar 21 14:53:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 21 14:53:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 21 14:53:50 symfony [info] {mainActions} Call "mainActions->executeIndex()"
+Mar 21 14:53:50 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/modules/main/templates/indexSuccess.php"
+Mar 21 14:53:50 symfony [info] {sfPHPView} Decorate content with "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 14:53:50 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 14:53:50 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 21 14:53:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 21 14:53:50 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 21 14:53:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 21 14:53:50 symfony [info] {sfWebDebugLogger} Configuration 23.81 ms (10)
+Mar 21 14:53:50 symfony [info] {sfWebDebugLogger} Factories 72.86 ms (1)
+Mar 21 14:53:50 symfony [info] {sfWebDebugLogger} Action "main/index" 0.27 ms (1)
+Mar 21 14:53:50 symfony [info] {sfWebDebugLogger} View "Success" for "main/index" 45.01 ms (1)
+Mar 21 14:53:50 symfony [info] {sfWebResponse} Send content (28604 o)
+Mar 21 14:55:23 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'index',)
+Mar 21 14:55:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 21 14:55:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 21 14:55:23 symfony [info] {mainActions} Call "mainActions->executeIndex()"
+Mar 21 14:55:23 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/modules/main/templates/indexSuccess.php"
+Mar 21 14:55:23 symfony [info] {sfPHPView} Decorate content with "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 14:55:23 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 14:55:23 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 21 14:55:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 21 14:55:23 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 21 14:55:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 21 14:55:23 symfony [info] {sfWebDebugLogger} Configuration 96.65 ms (10)
+Mar 21 14:55:23 symfony [info] {sfWebDebugLogger} Factories 83.22 ms (1)
+Mar 21 14:55:23 symfony [info] {sfWebDebugLogger} Action "main/index" 0.25 ms (1)
+Mar 21 14:55:23 symfony [info] {sfWebDebugLogger} View "Success" for "main/index" 124.33 ms (1)
+Mar 21 14:55:23 symfony [info] {sfWebResponse} Send content (28671 o)
+Mar 21 14:56:45 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'index',)
+Mar 21 14:56:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 21 14:56:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 21 14:56:45 symfony [info] {mainActions} Call "mainActions->executeIndex()"
+Mar 21 14:56:45 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/modules/main/templates/indexSuccess.php"
+Mar 21 14:56:45 symfony [info] {sfPHPView} Decorate content with "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 14:56:45 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 14:56:45 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 21 14:56:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 21 14:56:45 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 21 14:56:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 21 14:56:45 symfony [info] {sfWebDebugLogger} Configuration 31.16 ms (10)
+Mar 21 14:56:45 symfony [info] {sfWebDebugLogger} Factories 84.67 ms (1)
+Mar 21 14:56:45 symfony [info] {sfWebDebugLogger} Action "main/index" 0.24 ms (1)
+Mar 21 14:56:45 symfony [info] {sfWebDebugLogger} View "Success" for "main/index" 52.13 ms (1)
+Mar 21 14:56:45 symfony [info] {sfWebResponse} Send content (28757 o)
+Mar 21 16:30:28 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'index',)
+Mar 21 16:30:28 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/storage/sfSessionStorage.class.php on line 93 (session_start(): Cannot send session cache limiter - headers already sent (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/config/sfRootConfigHandler.class.php:91))
+Mar 21 16:30:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 21 16:30:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 21 16:30:28 symfony [info] {mainActions} Call "mainActions->executeIndex()"
+Mar 21 16:30:28 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 21 16:30:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.slug AS s__slug, s.parent_id AS s__parent_id, s.type AS s__type, s.priority AS s__priority, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM section s WHERE (s.parent_id = ?) LIMIT 1 - (0)
+Mar 21 16:30:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.slug AS s__slug, s.parent_id AS s__parent_id, s.type AS s__type, s.priority AS s__priority, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM section s WHERE (s.parent_id = ?) - (3)
+Mar 21 16:30:28 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/modules/main/templates/indexSuccess.php"
+Mar 21 16:30:28 symfony [info] {sfPHPView} Decorate content with "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 16:30:28 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 16:30:28 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/config/sfRootConfigHandler.class.php:91))
+Mar 21 16:30:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 21 16:30:28 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/config/sfRootConfigHandler.class.php:91))
+Mar 21 16:30:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 21 16:30:28 symfony [info] {sfWebDebugLogger} Configuration 210.48 ms (9)
+Mar 21 16:30:28 symfony [info] {sfWebDebugLogger} Factories 195.45 ms (1)
+Mar 21 16:30:28 symfony [info] {sfWebDebugLogger} Action "main/index" 78.07 ms (1)
+Mar 21 16:30:28 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.83 ms (3)
+Mar 21 16:30:28 symfony [info] {sfWebDebugLogger} View "Success" for "main/index" 34.39 ms (1)
+Mar 21 16:30:29 symfony [info] {sfWebResponse} Send content (34811 o)
+Mar 21 16:30:33 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'index',)
+Mar 21 16:30:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 21 16:30:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 21 16:30:33 symfony [info] {mainActions} Call "mainActions->executeIndex()"
+Mar 21 16:30:33 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 21 16:30:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.slug AS s__slug, s.parent_id AS s__parent_id, s.type AS s__type, s.priority AS s__priority, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM section s WHERE (s.parent_id = ?) LIMIT 1 - (0)
+Mar 21 16:30:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.slug AS s__slug, s.parent_id AS s__parent_id, s.type AS s__type, s.priority AS s__priority, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM section s WHERE (s.parent_id = ?) - (3)
+Mar 21 16:30:33 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/modules/main/templates/indexSuccess.php"
+Mar 21 16:30:33 symfony [info] {sfPHPView} Decorate content with "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 16:30:33 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 21 16:30:33 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 21 16:30:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 21 16:30:33 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 21 16:30:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 21 16:30:33 symfony [info] {sfWebDebugLogger} Configuration 2.01 ms (9)
+Mar 21 16:30:33 symfony [info] {sfWebDebugLogger} Factories 46.77 ms (1)
+Mar 21 16:30:33 symfony [info] {sfWebDebugLogger} Action "main/index" 66.35 ms (1)
+Mar 21 16:30:33 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.68 ms (3)
+Mar 21 16:30:33 symfony [info] {sfWebDebugLogger} View "Success" for "main/index" 15.23 ms (1)
+Mar 21 16:30:33 symfony [info] {sfWebResponse} Send content (34839 o)

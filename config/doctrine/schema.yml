@@ -1,0 +1,64 @@
+
+#Описание таблицы разделов/подразделов
+Section:
+  actAs: { Timestampable: ~ }
+  columns:
+    id:
+      type: integer(4)
+      unsigned: false
+      notnull: true
+      primary: true
+      autoincrement: true
+    name:
+      type: string(255)
+      notnull: true
+    slug:
+      type: string(255)
+    parent_id:
+      type: integer
+      primary: false
+    type:
+      type: enum
+      values:
+        - WithoutContent
+        - WithUniqueContent
+        - WithHTMLContent
+        - WithListContent
+    priority:
+      type: boolean
+      default: 0
+  relations:
+    Content:
+      local: id
+      foreign: section_id
+      type: one
+      foreignType: one
+
+
+#Описание таблицы с контентом
+Content:
+  actAs: { Timestampable: ~ }
+  columns:
+    id:
+      type: integer
+      unsigned: false
+      notnull: true
+      primary: true
+      autoincrement: true
+    html:
+      type: clob
+      notnull: false
+    section_id:
+      type: integer(4)
+      unsigned: false
+      notnull: true
+    visibility:
+      type: boolean
+      default: 0
+  relations:
+    Section:
+      local: section_id
+      foreign: id
+      type: one
+      foreignType: one
+

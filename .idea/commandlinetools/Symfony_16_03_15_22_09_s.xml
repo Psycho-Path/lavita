@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<framework xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/frameworkDescriptionVersion1.1.3.xsd" frameworkId="com.symfony" name="Symfony_16.03.15 22:09_s" invoke="/usr/bin/php /Users/newapple/Sites/Lavita/lib/vendor/symfony/data/bin/symfony" alias="s" enabled="true" version="2">
+  <command>
+    <name>help</name>
+    <help><![CDATA[The <em>help</em> task displays help for a given task:<br/> <br/> <em>./symfony help test:all</em><br/> <br/> You can also output the help as XML by using the <strong>--xml</strong> option:<br/> <br/> <em>./symfony help test:all --xml</em>]]></help>
+    <params>task_name[=null]</params>
+  </command>
+  <command>
+    <name>list</name>
+    <help><![CDATA[The <em>list</em> task lists all tasks:<br/> <br/> <em>./symfony list</em><br/> <br/> You can also display the tasks for a specific namespace:<br/> <br/> <em>./symfony list test</em><br/> <br/> You can also output the information as XML by using the <strong>--xml</strong> option:<br/> <br/> <em>./symfony list --xml</em>]]></help>
+    <params>namespace[=null]</params>
+  </command>
+  <command>
+    <name>app:routes</name>
+    <help><![CDATA[The <em>app:routes</em> displays the current routes for a given application:<br/> <br/> <em>./symfony app:routes frontend</em>]]></help>
+    <params>application name[=null]</params>
+  </command>
+  <command>
+    <name>cache:clear</name>
+    <help><![CDATA[The <em>cache:clear</em> task clears the symfony cache.<br/> <br/> By default, it removes the cache for all available types, all applications,<br/> and all environments.<br/> <br/> You can restrict by type, application, or environment:<br/> <br/> For example, to clear the <strong>frontend</strong> application cache:<br/> <br/> <em>./symfony cache:clear --app=frontend</em><br/> <br/> To clear the cache for the <strong>prod</strong> environment for the <strong>frontend</strong> application:<br/> <br/> <em>./symfony cache:clear --app=frontend --env=prod</em><br/> <br/> To clear the cache for all <strong>prod</strong> environments:<br/> <br/> <em>./symfony cache:clear --env=prod</em><br/> <br/> To clear the <strong>config</strong> cache for all <strong>prod</strong> environments:<br/> <br/> <em>./symfony cache:clear --type=config --env=prod</em><br/> <br/> The built-in types are: <strong>config</strong>, <strong>i18n</strong>, <strong>routing</strong>, <strong>module</strong><br/> and <strong>template</strong>.<br/>]]></help>
+  </command>
+  <command>
+    <name>cc</name>
+    <help><![CDATA[The <em>cache:clear</em> task clears the symfony cache.<br/> <br/> By default, it removes the cache for all available types, all applications,<br/> and all environments.<br/> <br/> You can restrict by type, application, or environment:<br/> <br/> For example, to clear the <strong>frontend</strong> application cache:<br/> <br/> <em>./symfony cache:clear --app=frontend</em><br/> <br/> To clear the cache for the <strong>prod</strong> environment for the <strong>frontend</strong> application:<br/> <br/> <em>./symfony cache:clear --app=frontend --env=prod</em><br/> <br/> To clear the cache for all <strong>prod</strong> environments:<br/> <br/> <em>./symfony cache:clear --env=prod</em><br/> <br/> To clear the <strong>config</strong> cache for all <strong>prod</strong> environments:<br/> <br/> <em>./symfony cache:clear --type=config --env=prod</em><br/> <br/> The built-in types are: <strong>config</strong>, <strong>i18n</strong>, <strong>routing</strong>, <strong>module</strong><br/> and <strong>template</strong>.<br/>]]></help>
+  </command>
+  <command>
+    <name>configure:author</name>
+    <help><![CDATA[The <em>configure:author</em> task configures the author for a project:<br/> <br/> <em>./symfony configure:author "Fabien Potencier <fabien.potencier@symfony-project.com>"</em><br/> <br/> The author is used by the generates to pre-configure the PHPDoc header for each generated file.<br/> <br/> The value is stored in [config/properties.ini].]]></help>
+    <params>author</params>
+  </command>
+  <command>
+    <name>configure:database</name>
+    <help><![CDATA[The <em>configure:database</em> task configures the database DSN<br/> for a project:<br/> <br/> <em>./symfony configure:database mysql:host=localhost;dbname=example root mYsEcret</em><br/> <br/> By default, the task change the configuration for all environment. If you want<br/> to change the dsn for a specific environment, use the <strong>env</strong> option:<br/> <br/> <em>./symfony configure:database --env=dev mysql:host=localhost;dbname=example_dev root mYsEcret</em><br/> <br/> To change the configuration for a specific application, use the <strong>app</strong> option:<br/> <br/> <em>./symfony configure:database --app=frontend mysql:host=localhost;dbname=example root mYsEcret</em><br/> <br/> You can also specify the connection name and the database class name:<br/> <br/> <em>./symfony configure:database --name=main --class=ProjectDatabase mysql:host=localhost;dbname=example root mYsEcret</em>]]></help>
+    <params>dsn username[=null] password[=null]</params>
+  </command>
+  <command>
+    <name>doctrine:build</name>
+    <help><![CDATA[The <em>doctrine:build</em> task generates code based on your schema:<br/> <br/> <em>./symfony doctrine:build</em><br/> <br/> You must specify what you would like built. For instance, if you want model<br/> and form classes built use the <strong>--model</strong> and <strong>--forms</strong> options:<br/> <br/> <em>./symfony doctrine:build --model --forms</em><br/> <br/> You can use the <strong>--all</strong> shortcut option if you would like all classes and<br/> SQL files generated and the database rebuilt:<br/> <br/> <em>./symfony doctrine:build --all</em><br/> <br/> This is equivalent to running the following tasks:<br/> <br/> <em>./symfony doctrine:drop-db</em><br/> <em>./symfony doctrine:build-db</em><br/> <em>./symfony doctrine:build-model</em><br/> <em>./symfony doctrine:build-forms</em><br/> <em>./symfony doctrine:build-filters</em><br/> <em>./symfony doctrine:build-sql</em><br/> <em>./symfony doctrine:insert-sql</em><br/> <br/> You can also generate only class files by using the <strong>--all-classes</strong> shortcut<br/> option. When this option is used alone, the database will not be modified.<br/> <br/> <em>./symfony doctrine:build --all-classes</em><br/> <br/> The <strong>--and-migrate</strong> option will run any pending migrations once the builds<br/> are complete:<br/> <br/> <em>./symfony doctrine:build --db --and-migrate</em><br/> <br/> The <strong>--and-load</strong> option will load data from the project and plugin<br/> <strong>data/fixtures/</strong> directories:<br/> <br/> <em>./symfony doctrine:build --db --and-migrate --and-load</em><br/> <br/> To specify what fixtures are loaded, add a parameter to the <strong>--and-load</strong> option:<br/> <br/> <em>./symfony doctrine:build --all --and-load="data/fixtures/dev/"</em><br/> <br/> To append fixture data without erasing any records from the database, include<br/> the <strong>--and-append</strong> option:<br/> <br/> <em>./symfony doctrine:build --all --and-append</em>]]></help>
+  </command>
+  <command>
+    <name>doctrine:build-db</name>
+    <help><![CDATA[The <em>doctrine:build-db</em> task creates one or more databases based on<br/> configuration in <strong>config/databases.yml</strong>:<br/> <br/> <em>./symfony doctrine:build-db</em><br/> <br/> You can specify what databases to create by providing their names:<br/> <br/> <em>./symfony doctrine:build-db slave1 slave2</em>]]></help>
+    <params>database[=null]</params>
+  </command>
+  <command>
+    <name>doctrine:create-db</name>
+    <help><![CDATA[The <em>doctrine:build-db</em> task creates one or more databases based on<br/> configuration in <strong>config/databases.yml</strong>:<br/> <br/> <em>./symfony doctrine:build-db</em><br/> <br/> You can specify what databases to create by providing their names:<br/> <br/> <em>./symfony doctrine:build-db slave1 slave2</em>]]></help>
+    <params>database[=null]</params>
+  </command>
+  <command>
+    <name>doctrine:build-filters</name>
+    <help><![CDATA[The <em>doctrine:build-filters</em> task creates form filter classes from the schema:<br/> <br/> <em>./symfony doctrine:build-filters</em><br/> <br/> This task creates form filter classes based on the model. The classes are<br/> created in <strong>lib/doctrine/filter</strong>.<br/> <br/> This task never overrides custom classes in <strong>lib/doctrine/filter</strong>.<br/> It only replaces base classes generated in <strong>lib/doctrine/filter/base</strong>.]]></help>
+  </command>
+  <command>
+    <name>doctrine:build-forms</name>
+    <help><![CDATA[The <em>doctrine:build-forms</em> task creates form classes from the schema:<br/> <br/> <em>./symfony doctrine:build-forms</em><br/> <br/> This task creates form classes based on the model. The classes are created<br/> in <strong>lib/doctrine/form</strong>.<br/> <br/> This task never overrides custom classes in <strong>lib/doctrine/form</strong>.<br/> It only replaces base classes generated in <strong>lib/doctrine/form/base</strong>.]]></help>
+  </command>
+  <command>
+    <name>doctrine:build-model</name>
+    <help><![CDATA[The <em>doctrine:build-model</em> task creates model classes from the schema:<br/> <br/> <em>./symfony doctrine:build-model</em><br/> <br/> The task read the schema information in <strong>config/doctrine/*.yml</strong><br/> from the project and all enabled plugins.<br/> <br/> The model classes files are created in <strong>lib/model/doctrine</strong>.<br/> <br/> This task never overrides custom classes in <strong>lib/model/doctrine</strong>.<br/> It only replaces files in <strong>lib/model/doctrine/base</strong>.]]></help>
+  </command>
+  <command>
+    <name>doctrine:build-schema</name>
+    <help><![CDATA[The <em>doctrine:build-schema</em> task introspects a database to create a schema:<br/> <br/> <em>./symfony doctrine:build-schema</em><br/> <br/> The task creates a yml file in <strong>config/doctrine</strong>]]></help>
+  </command>
+  <command>
+    <name>doctrine:build-sql</name>
+    <help><![CDATA[The <em>doctrine:build-sql</em> task creates SQL statements for table creation:<br/> <br/> <em>./symfony doctrine:build-sql</em><br/> <br/> The generated SQL is optimized for the database configured in <strong>config/databases.yml</strong>:<br/> <br/> <em>doctrine.database = mysql</em>]]></help>
+  </command>
+  <command>
+    <name>doctrine:clean-model-files</name>
+    <help><![CDATA[The <em>doctrine:clean-model-files</em> task deletes model classes that are not<br/> represented in project or plugin schema.yml files:<br/> <br/> <em>./symfony doctrine:clean-model-files</em>]]></help>
+  </command>
+  <command>
+    <name>doctrine:clean</name>
+    <help><![CDATA[The <em>doctrine:clean-model-files</em> task deletes model classes that are not<br/> represented in project or plugin schema.yml files:<br/> <br/> <em>./symfony doctrine:clean-model-files</em>]]></help>
+  </command>
+  <command>
+    <name>doctrine:create-model-tables</name>
+    <help><![CDATA[The <em>doctrine:create-model-tables</em> Drop and recreate tables for specified models:<br/> <br/> <em>./symfony doctrine:create-model-tables User</em>]]></help>
+    <params>models[=null]</params>
+  </command>
+  <command>
+    <name>doctrine:data-dump</name>
+    <help><![CDATA[The <em>doctrine:data-dump</em> task dumps database data:<br/> <br/> <em>./symfony doctrine:data-dump</em><br/> <br/> The task dumps the database data in <strong>data/fixtures/%target%</strong>.<br/> <br/> The dump file is in the YML format and can be reimported by using<br/> the <em>doctrine:data-load</em> task.<br/> <br/> <em>./symfony doctrine:data-load</em>]]></help>
+    <params>target[=null]</params>
+  </command>
+  <command>
+    <name>doctrine:data-load</name>
+    <help><![CDATA[The <em>doctrine:data-load</em> task loads data fixtures into the database:<br/> <br/> <em>./symfony doctrine:data-load</em><br/> <br/> The task loads data from all the files found in <strong>data/fixtures/</strong>.<br/> <br/> If you want to load data from specific files or directories, you can append<br/> them as arguments:<br/> <br/> <em>./symfony doctrine:data-load data/fixtures/dev data/fixtures/users.yml</em><br/> <br/> If you don't want the task to remove existing data in the database,<br/> use the <strong>--append</strong> option:<br/> <br/> <em>./symfony doctrine:data-load --append</em>]]></help>
+    <params>dir_or_file[=null]</params>
+  </command>
+  <command>
+    <name>doctrine:delete-model-files</name>
+    <help><![CDATA[The <em>doctrine:delete-model-files</em> task deletes all files associated with certain<br/> models:<br/> <br/> <em>./symfony doctrine:delete-model-files Article Author</em>]]></help>
+    <params>name</params>
+  </command>
+  <command>
+    <name>doctrine:dql</name>
+    <help><![CDATA[The <em>doctrine:dql</em> task executes a DQL query and displays the formatted<br/> results:<br/> <br/> <em>./symfony doctrine:dql "FROM User"</em><br/> <br/> You can show the SQL that would be executed by using the <strong>--show-sql</strong> option:<br/> <br/> <em>./symfony doctrine:dql --show-sql "FROM User"</em><br/> <br/> Provide query parameters as additional arguments:<br/> <br/> <em>./symfony doctrine:dql "FROM User WHERE email LIKE ?" "%symfony-project.com"</em>]]></help>
+    <params>dql_query parameter[=null]</params>
+  </command>
+  <command>
+    <name>doctrine:drop-db</name>
+    <help><![CDATA[The <em>doctrine:drop-db</em> task drops one or more databases based on<br/> configuration in <strong>config/databases.yml</strong>:<br/> <br/> <em>./symfony doctrine:drop-db</em><br/> <br/> You will be prompted for confirmation before any databases are dropped unless<br/> you provide the <strong>--no-confirmation</strong> option:<br/> <br/> <em>./symfony doctrine:drop-db --no-confirmation</em><br/> <br/> You can specify what databases to drop by providing their names:<br/> <br/> <em>./symfony doctrine:drop-db slave1 slave2</em>]]></help>
+    <params>database[=null]</params>
+  </command>
+  <command>
+    <name>doctrine:generate-admin</name>
+    <help><![CDATA[The <em>doctrine:generate-admin</em> task generates a Doctrine admin module:<br/> <br/> <em>./symfony doctrine:generate-admin frontend Article</em><br/> <br/> The task creates a module in the <strong>%frontend%</strong> application for the<br/> <strong>%Article%</strong> model.<br/> <br/> The task creates a route for you in the application <strong>routing.yml</strong>.<br/> <br/> You can also generate a Doctrine admin module by passing a route name:<br/> <br/> <em>./symfony doctrine:generate-admin frontend article</em><br/> <br/> The task creates a module in the <strong>%frontend%</strong> application for the<br/> <strong>%article%</strong> route definition found in <strong>routing.yml</strong>.<br/> <br/> For the filters and batch actions to work properly, you need to add<br/> the <strong>with_wildcard_routes</strong> option to the route:<br/> <br/> article:<br/> class: sfDoctrineRouteCollection<br/> options:<br/> model: Article<br/> with_wildcard_routes: true]]></help>
+    <params>application route_or_model</params>
+  </command>
+  <command>
+    <name>doctrine:generate-migration</name>
+    <help><![CDATA[The <em>doctrine:generate-migration</em> task generates migration template<br/> <br/> <em>./symfony doctrine:generate-migration AddUserEmailColumn</em><br/> <br/> You can provide an <strong>--editor-cmd</strong> option to open the new migration class in your<br/> editor of choice upon creation:<br/> <br/> <em>./symfony doctrine:generate-migration AddUserEmailColumn --editor-cmd=mate</em>]]></help>
+    <params>name</params>
+  </command>
+  <command>
+    <name>doctrine:generate-migrations-db</name>
+    <help><![CDATA[The <em>doctrine:generate-migrations-db</em> task generates migration classes from<br/> existing database connections:<br/> <br/> <em>./symfony doctrine:generate-migrations-db</em>]]></help>
+  </command>
+  <command>
+    <name>doctrine:generate-migrations-diff</name>
+    <help><![CDATA[The <em>doctrine:generate-migrations-diff</em> task generates migration classes by<br/> producing a diff between your old and new schema.<br/> <br/> <em>./symfony doctrine:generate-migrations-diff</em>]]></help>
+  </command>
+  <command>
+    <name>doctrine:generate-migrations-models</name>
+    <help><![CDATA[The <em>doctrine:generate-migrations-models</em> task generates migration classes<br/> from an existing set of models:<br/> <br/> <em>./symfony doctrine:generate-migrations-models</em>]]></help>
+  </command>
+  <command>
+    <name>doctrine:generate-module</name>
+    <help><![CDATA[The <em>doctrine:generate-module</em> task generates a Doctrine module:<br/> <br/> <em>./symfony doctrine:generate-module frontend article Article</em><br/> <br/> The task creates a <strong>%module%</strong> module in the <strong>%application%</strong> application<br/> for the model class <strong>%model%</strong>.<br/> <br/> You can also create an empty module that inherits its actions and templates from<br/> a runtime generated module in <strong>%sf_app_cache_dir%/modules/auto%module%</strong> by<br/> using the <strong>--generate-in-cache</strong> option:<br/> <br/> <em>./symfony doctrine:generate-module --generate-in-cache frontend article Article</em><br/> <br/> The generator can use a customized theme by using the <strong>--theme</strong> option:<br/> <br/> <em>./symfony doctrine:generate-module --theme="custom" frontend article Article</em><br/> <br/> This way, you can create your very own module generator with your own conventions.<br/> <br/> You can also change the default actions base class (default to sfActions) of<br/> the generated modules:<br/> <br/> <em>./symfony doctrine:generate-module --actions-base-class="ProjectActions" frontend article Article</em>]]></help>
+    <params>application module model</params>
+  </command>
+  <command>
+    <name>doctrine:generate-module-for-route</name>
+    <help><![CDATA[The <em>doctrine:generate-module-for-route</em> task generates a Doctrine module for a route definition:<br/> <br/> <em>./symfony doctrine:generate-module-for-route frontend article</em><br/> <br/> The task creates a module in the <strong>%frontend%</strong> application for the<br/> <strong>%article%</strong> route definition found in <strong>routing.yml</strong>.]]></help>
+    <params>application route</params>
+  </command>
+  <command>
+    <name>doctrine:insert-sql</name>
+    <help><![CDATA[The <em>doctrine:insert-sql</em> task creates database tables:<br/> <br/> <em>./symfony doctrine:insert-sql</em><br/> <br/> The task connects to the database and creates tables for all the<br/> <strong>lib/model/doctrine/*.class.php</strong> files.]]></help>
+  </command>
+  <command>
+    <name>doctrine:migrate</name>
+    <help><![CDATA[The <em>doctrine:migrate</em> task migrates the database:<br/> <br/> <em>./symfony doctrine:migrate</em><br/> <br/> Provide a version argument to migrate to a specific version:<br/> <br/> <em>./symfony doctrine:migrate 10</em><br/> <br/> To migration up or down one migration, use the <strong>--up</strong> or <strong>--down</strong> options:<br/> <br/> <em>./symfony doctrine:migrate --down</em><br/> <br/> If your database supports rolling back DDL statements, you can run migrations<br/> in dry-run mode using the <strong>--dry-run</strong> option:<br/> <br/> <em>./symfony doctrine:migrate --dry-run</em>]]></help>
+    <params>version[=null]</params>
+  </command>
+  <command>
+    <name>generate:app</name>
+    <help><![CDATA[The <em>generate:app</em> task creates the basic directory structure<br/> for a new application in the current project:<br/> <br/> <em>./symfony generate:app frontend</em><br/> <br/> This task also creates two front controller scripts in the<br/> <strong>web/</strong> directory:<br/> <br/> <em>web/%application%.php</em> for the production environment<br/> <em>web/%application%_dev.php</em> for the development environment<br/> <br/> For the first application, the production environment script is named<br/> <strong>index.php</strong>.<br/> <br/> If an application with the same name already exists,<br/> it throws a <strong>sfCommandException</strong>.<br/> <br/> By default, the output escaping is enabled (to prevent XSS), and a random<br/> secret is also generated to prevent CSRF.<br/> <br/> You can disable output escaping by using the <strong>escaping-strategy</strong><br/> option:<br/> <br/> <em>./symfony generate:app frontend --escaping-strategy=false</em><br/> <br/> You can enable session token in forms (to prevent CSRF) by defining<br/> a secret with the <strong>csrf-secret</strong> option:<br/> <br/> <em>./symfony generate:app frontend --csrf-secret=UniqueSecret</em><br/> <br/> You can customize the default skeleton used by the task by creating a<br/> <strong>%sf_data_dir%/skeleton/app</strong> directory.]]></help>
+    <params>app</params>
+  </command>
+  <command>
+    <name>generate:module</name>
+    <help><![CDATA[The <em>generate:module</em> task creates the basic directory structure<br/> for a new module in an existing application:<br/> <br/> <em>./symfony generate:module frontend article</em><br/> <br/> The task can also change the author name found in the <strong>actions.class.php</strong><br/> if you have configure it in <strong>config/properties.ini</strong>:<br/> <br/> <em>[symfony]<br/> name=blog<br/> author=Fabien Potencier <fabien.potencier@sensio.com></em><br/> <br/> You can customize the default skeleton used by the task by creating a<br/> <strong>%sf_data_dir%/skeleton/module</strong> directory.<br/> <br/> The task also creates a functional test stub named<br/> <strong>%sf_test_dir%/functional/%application%/%module%ActionsTest.class.php</strong><br/> that does not pass by default.<br/> <br/> If a module with the same name already exists in the application,<br/> it throws a <strong>sfCommandException</strong>.]]></help>
+    <params>application module</params>
+  </command>
+  <command>
+    <name>generate:project</name>
+    <help><![CDATA[The <em>generate:project</em> task creates the basic directory structure<br/> for a new project in the current directory:<br/> <br/> <em>./symfony generate:project blog</em><br/> <br/> If the current directory already contains a symfony project,<br/> it throws a <strong>sfCommandException</strong>.<br/> <br/> By default, the task configures Doctrine as the ORM. If you want to use<br/> Propel, use the <strong>--orm</strong> option:<br/> <br/> <em>./symfony generate:project blog --orm=Propel</em><br/> <br/> If you don't want to use an ORM, pass <strong>none</strong> to <strong>--orm</strong> option:<br/> <br/> <em>./symfony generate:project blog --orm=none</em><br/> <br/> You can also pass the <strong>--installer</strong> option to further customize the<br/> project:<br/> <br/> <em>./symfony generate:project blog --installer=./installer.php</em><br/> <br/> You can optionally include a second <strong>author</strong> argument to specify what name to<br/> use as author when symfony generates new classes:<br/> <br/> <em>./symfony generate:project blog "Jack Doe"</em>]]></help>
+    <params>name author[=null]</params>
+  </command>
+  <command>
+    <name>generate:task</name>
+    <help><![CDATA[The <em>generate:task</em> creates a new sfTask class based on the name passed as<br/> argument:<br/> <br/> <em>./symfony generate:task namespace:name</em><br/> <br/> The <strong>namespaceNameTask.class.php</strong> skeleton task is created under the <strong>lib/task/</strong><br/> directory. Note that the namespace is optional.<br/> <br/> If you want to create the file in another directory (relative to the project<br/> root folder), pass it in the <strong>--dir</strong> option. This directory will be created<br/> if it does not already exist.<br/> <br/> <em>./symfony generate:task namespace:name --dir=plugins/myPlugin/lib/task</em><br/> <br/> If you want the task to default to a connection other than <strong>doctrine</strong>, provide<br/> the name of this connection with the <strong>--use-database</strong> option:<br/> <br/> <em>./symfony generate:task namespace:name --use-database=main</em><br/> <br/> The <strong>--use-database</strong> option can also be used to disable database<br/> initialization in the generated task:<br/> <br/> <em>./symfony generate:task namespace:name --use-database=false</em><br/> <br/> You can also specify a description:<br/> <br/> <em>./symfony generate:task namespace:name --brief-description="Does interesting things"</em>]]></help>
+    <params>task_name</params>
+  </command>
+  <command>
+    <name>i18n:extract</name>
+    <help><![CDATA[The <em>i18n:extract</em> task extracts i18n strings from your project files<br/> for the given application and target culture:<br/> <br/> <em>./symfony i18n:extract frontend fr</em><br/> <br/> By default, the task only displays the number of new and old strings<br/> it found in the current project.<br/> <br/> If you want to display the new strings, use the <strong>--display-new</strong> option:<br/> <br/> <em>./symfony i18n:extract --display-new frontend fr</em><br/> <br/> To save them in the i18n message catalogue, use the <strong>--auto-save</strong> option:<br/> <br/> <em>./symfony i18n:extract --auto-save frontend fr</em><br/> <br/> If you want to display strings that are present in the i18n messages<br/> catalogue but are not found in the application, use the <br/> <strong>--display-old</strong> option:<br/> <br/> <em>./symfony i18n:extract --display-old frontend fr</em><br/> <br/> To automatically delete old strings, use the <strong>--auto-delete</strong> but<br/> be careful, especially if you have translations for plugins as they will<br/> appear as old strings but they are not:<br/> <br/> <em>./symfony i18n:extract --auto-delete frontend fr</em>]]></help>
+    <params>application culture</params>
+  </command>
+  <command>
+    <name>i18n:find</name>
+    <help><![CDATA[The <em>i18n:find</em> task finds non internationalized strings embedded in templates:<br/> <br/> <em>./symfony i18n:find frontend</em><br/> <br/> This task is able to find non internationalized strings in pure HTML and in PHP code:<br/> <br/> <p>Non i18n text</p><br/> <p><?php echo 'Test' ?></p><br/> <br/> As the task returns all strings embedded in PHP, you can have some false positive (especially<br/> if you use the string syntax for helper arguments).]]></help>
+    <params>application</params>
+  </command>
+  <command>
+    <name>log:clear</name>
+    <help><![CDATA[The <em>log:clear</em> task clears all symfony log files:<br/> <br/> <em>./symfony log:clear</em>]]></help>
+  </command>
+  <command>
+    <name>log:rotate</name>
+    <help><![CDATA[The <em>log:rotate</em> task rotates application log files for a given<br/> environment:<br/> <br/> <em>./symfony log:rotate frontend dev</em><br/> <br/> You can specify a <strong>period</strong> or a <strong>history</strong> option:<br/> <br/> <em>./symfony log:rotate frontend dev --history=10 --period=7</em>]]></help>
+    <params>application env</params>
+  </command>
+  <command>
+    <name>plugin:add-channel</name>
+    <help><![CDATA[The <em>plugin:add-channel</em> task adds a new PEAR channel:<br/> <br/> <em>./symfony plugin:add-channel symfony.plugins.pear.example.com</em>]]></help>
+    <params>name</params>
+  </command>
+  <command>
+    <name>plugin:install</name>
+    <help><![CDATA[The <em>plugin:install</em> task installs a plugin:<br/> <br/> <em>./symfony plugin:install sfGuardPlugin</em><br/> <br/> By default, it installs the latest <strong>stable</strong> release.<br/> <br/> If you want to install a plugin that is not stable yet,<br/> use the <strong>stability</strong> option:<br/> <br/> <em>./symfony plugin:install --stability=beta sfGuardPlugin</em><br/> <em>./symfony plugin:install -s beta sfGuardPlugin</em><br/> <br/> You can also force the installation of a specific version:<br/> <br/> <em>./symfony plugin:install --release=1.0.0 sfGuardPlugin</em><br/> <em>./symfony plugin:install -r 1.0.0 sfGuardPlugin</em><br/> <br/> To force installation of all required dependencies, use the <em>install_deps</em> flag:<br/> <br/> <em>./symfony plugin:install --install-deps sfGuardPlugin</em><br/> <em>./symfony plugin:install -d sfGuardPlugin</em><br/> <br/> By default, the PEAR channel used is <em>symfony-plugins</em><br/> (plugins.symfony-project.org).<br/> <br/> You can specify another channel with the <strong>channel</strong> option:<br/> <br/> <em>./symfony plugin:install --channel=mypearchannel sfGuardPlugin</em><br/> <em>./symfony plugin:install -c mypearchannel sfGuardPlugin</em><br/> <br/> You can also install PEAR packages hosted on a website:<br/> <br/> <em>./symfony plugin:install http://somewhere.example.com/sfGuardPlugin-1.0.0.tgz</em><br/> <br/> Or local PEAR packages:<br/> <br/> <em>./symfony plugin:install /home/fabien/plugins/sfGuardPlugin-1.0.0.tgz</em><br/> <br/> If the plugin contains some web content (images, stylesheets or javascripts),<br/> the task creates a <strong>%name%</strong> symbolic link for those assets under <strong>web/</strong>.<br/> On Windows, the task copy all the files to the <strong>web/%name%</strong> directory.]]></help>
+    <params>name</params>
+  </command>
+  <command>
+    <name>plugin:list</name>
+    <help><![CDATA[The <em>plugin:list</em> task lists all installed plugins:<br/> <br/> <em>./symfony plugin:list</em><br/> <br/> It also gives the channel and version for each plugin.]]></help>
+  </command>
+  <command>
+    <name>plugin:publish-assets</name>
+    <help><![CDATA[The <em>plugin:publish-assets</em> task will publish web assets from all plugins.<br/> <br/> <em>./symfony plugin:publish-assets</em><br/> <br/> In fact this will send the <em>plugin.post_install</em> event to each plugin.<br/> <br/> You can specify which plugin or plugins should install their assets by passing<br/> those plugins' names as arguments:<br/> <br/> <em>./symfony plugin:publish-assets sfDoctrinePlugin</em>]]></help>
+    <params>plugins[=null]</params>
+  </command>
+  <command>
+    <name>plugin:uninstall</name>
+    <help><![CDATA[The <em>plugin:uninstall</em> task uninstalls a plugin:<br/> <br/> <em>./symfony plugin:uninstall sfGuardPlugin</em><br/> <br/> The default channel is <em>symfony</em>.<br/> <br/> You can also uninstall a plugin which has a different channel:<br/> <br/> <em>./symfony plugin:uninstall --channel=mypearchannel sfGuardPlugin</em><br/> <br/> <em>./symfony plugin:uninstall -c mypearchannel sfGuardPlugin</em><br/> <br/> Or you can use the <em>channel/package</em> notation:<br/> <br/> <em>./symfony plugin:uninstall mypearchannel/sfGuardPlugin</em><br/> <br/> You can get the PEAR channel name of a plugin by launching the<br/> <strong>plugin:list] task.<br/> <br/> If the plugin contains some web content (images, stylesheets or javascripts),<br/> the task also removes the [web/%name%</strong> symbolic link (on *nix)<br/> or directory (on Windows).]]></help>
+    <params>name</params>
+  </command>
+  <command>
+    <name>plugin:upgrade</name>
+    <help><![CDATA[The <em>plugin:upgrade</em> task tries to upgrade a plugin:<br/> <br/> <em>./symfony plugin:upgrade sfGuardPlugin</em><br/> <br/> The default channel is <em>symfony</em>.<br/> <br/> If the plugin contains some web content (images, stylesheets or javascripts),<br/> the task also updates the <strong>web/%name%</strong> directory content on Windows.<br/> <br/> See <em>plugin:install</em> for more information about the format of the plugin name and options.]]></help>
+    <params>name</params>
+  </command>
+  <command>
+    <name>project:clear-controllers</name>
+    <help><![CDATA[The <em>project:clear-controllers</em> task clears all non production environment<br/> controllers:<br/> <br/> <em>./symfony project:clear-controllers</em><br/> <br/> You can use this task on a production server to remove all front<br/> controller scripts except the production ones.<br/> <br/> If you have two applications named <strong>frontend</strong> and <strong>backend</strong>,<br/> you have four default controller scripts in <strong>web/</strong>:<br/> <br/> <em>index.php<br/> frontend_dev.php<br/> backend.php<br/> backend_dev.php</em><br/> <br/> After executing the <strong>project:clear-controllers</strong> task, two front<br/> controller scripts are left in <strong>web/</strong>:<br/> <br/> <em>index.php<br/> backend.php</em><br/> <br/> Those two controllers are safe because debug mode and the web debug<br/> toolbar are disabled.]]></help>
+  </command>
+  <command>
+    <name>project:deploy</name>
+    <help><![CDATA[The <em>project:deploy</em> task deploys a project on a server:<br/> <br/> <em>./symfony project:deploy production</em><br/> <br/> The server must be configured in <strong>config/properties.ini</strong>:<br/> <br/> <em>[production]<br/> host=www.example.com<br/> port=22<br/> user=fabien<br/> dir=/var/www/sfblog/<br/> type=rsync</em><br/> <br/> To automate the deployment, the task uses rsync over SSH.<br/> You must configure SSH access with a key or configure the password<br/> in <strong>config/properties.ini</strong>.<br/> <br/> By default, the task is in dry-mode. To do a real deployment, you<br/> must pass the <strong>--go</strong> option:<br/> <br/> <em>./symfony project:deploy --go production</em><br/> <br/> Files and directories configured in <strong>config/rsync_exclude.txt</strong> are<br/> not deployed:<br/> <br/> <em>.svn<br/> /web/uploads/*<br/> /cache/*<br/> /log/*</em><br/> <br/> You can also create a <strong>rsync.txt</strong> and <strong>rsync_include.txt</strong> files.<br/> <br/> If you need to customize the <strong>rsync*.txt</strong> files based on the server,<br/> you can pass a <strong>rsync-dir</strong> option:<br/> <br/> <em>./symfony project:deploy --go --rsync-dir=config/production production</em><br/> <br/> Last, you can specify the options passed to the rsync executable, using the<br/> <em>rsync-options</em> option (defaults are <em>-azC --force --delete --progress</em>):<br/> <br/> <em>./symfony project:deploy --go --rsync-options=-avz</em>]]></help>
+    <params>server</params>
+  </command>
+  <command>
+    <name>project:disable</name>
+    <help><![CDATA[The <em>project:disable</em> task disables an environment:<br/> <br/> <em>./symfony project:disable prod</em><br/> <br/> You can also specify individual applications to be disabled in that<br/> environment:<br/> <br/> <em>./symfony project:disable prod frontend backend</em>]]></help>
+    <params>env app[=null]</params>
+  </command>
+  <command>
+    <name>project:enable</name>
+    <help><![CDATA[The <em>project:enable</em> task enables a specific environment:<br/> <br/> <em>./symfony project:enable frontend prod</em><br/> <br/> You can also specify individual applications to be enabled in that<br/> environment:<br/> <br/> <em>./symfony project:enable prod frontend backend</em>]]></help>
+    <params>env app[=null]</params>
+  </command>
+  <command>
+    <name>project:optimize</name>
+    <help><![CDATA[The <em>project:optimize</em> optimizes a project for better performance:<br/> <br/> <em>./symfony project:optimize frontend prod</em><br/> <br/> This task should only be used on a production server. Don't forget to re-run<br/> the task each time the project changes.]]></help>
+    <params>application env[=null]</params>
+  </command>
+  <command>
+    <name>project:permissions</name>
+    <help><![CDATA[The <em>project:permissions</em> task fixes directory permissions:<br/> <br/> <em>./symfony project:permissions</em>]]></help>
+  </command>
+  <command>
+    <name>project:send-emails</name>
+    <help><![CDATA[The <em>project:send-emails</em> sends emails stored in a queue:<br/> <br/> <em>php symfony project:send-emails</em><br/> <br/> You can limit the number of messages to send:<br/> <br/> <em>php symfony project:send-emails --message-limit=10</em><br/> <br/> Or limit to time (in seconds):<br/> <br/> <em>php symfony project:send-emails --time-limit=10</em>]]></help>
+  </command>
+  <command>
+    <name>project:validate</name>
+    <help><![CDATA[The <em>project:validate</em> task detects deprecated usage in your project.<br/> <br/> <em>./symfony project:validate</em><br/> <br/> The task lists all the files you need to change before switching to<br/> symfony 1.4.]]></help>
+  </command>
+  <command>
+    <name>symfony:test</name>
+    <help><![CDATA[The <em>test:all</em> task launches the symfony test suite:<br/> <br/> <em>./symfony symfony:test</em>]]></help>
+  </command>
+  <command>
+    <name>test:all</name>
+    <help><![CDATA[The <em>test:all</em> task launches all unit and functional tests:<br/> <br/> <em>./symfony test:all</em><br/> <br/> The task launches all tests found in <strong>test/</strong>.<br/> <br/> If some tests fail, you can use the <strong>--trace</strong> option to have more<br/> information about the failures:<br/> <br/> <em>./symfony test:all -t</em><br/> <br/> Or you can also try to fix the problem by launching them by hand or with the<br/> <strong>test:unit</strong> and <strong>test:functional</strong> task.<br/> <br/> Use the <strong>--only-failed</strong> option to force the task to only execute tests<br/> that failed during the previous run:<br/> <br/> <em>./symfony test:all --only-failed</em><br/> <br/> Here is how it works: the first time, all tests are run as usual. But for<br/> subsequent test runs, only tests that failed last time are executed. As you<br/> fix your code, some tests will pass, and will be removed from subsequent runs.<br/> When all tests pass again, the full test suite is run... you can then rinse<br/> and repeat.<br/> <br/> The task can output a JUnit compatible XML log file with the <strong>--xml</strong><br/> options:<br/> <br/> <em>./symfony test:all --xml=log.xml</em>]]></help>
+  </command>
+  <command>
+    <name>test:coverage</name>
+    <help><![CDATA[The <em>test:coverage</em> task outputs the code coverage<br/> given a test file or test directory<br/> and a lib file or lib directory for which you want code<br/> coverage:<br/> <br/> <em>./symfony test:coverage test/unit/model lib/model</em><br/> <br/> To output the lines not covered, pass the <em>--detailed</em> option:<br/> <br/> <em>./symfony test:coverage --detailed test/unit/model lib/model</em>]]></help>
+    <params>test_name lib_name</params>
+  </command>
+  <command>
+    <name>test:functional</name>
+    <help><![CDATA[The <em>test:functional</em> task launches functional tests for a<br/> given application:<br/> <br/> <em>./symfony test:functional frontend</em><br/> <br/> The task launches all tests found in <strong>test/functional/%application%</strong>.<br/> <br/> If some tests fail, you can use the <strong>--trace</strong> option to have more<br/> information about the failures:<br/> <br/> <em>./symfony test:functional frontend -t</em><br/> <br/> You can launch all functional tests for a specific controller by<br/> giving a controller name:<br/> <br/> <em>./symfony test:functional frontend article</em><br/> <br/> You can also launch all functional tests for several controllers:<br/> <br/> <em>./symfony test:functional frontend article comment</em><br/> <br/> The task can output a JUnit compatible XML log file with the <strong>--xml</strong><br/> options:<br/> <br/> <em>./symfony test:functional --xml=log.xml</em>]]></help>
+    <params>application controller[=null]</params>
+  </command>
+  <command>
+    <name>test:unit</name>
+    <help><![CDATA[The <em>test:unit</em> task launches unit tests:<br/> <br/> <em>./symfony test:unit</em><br/> <br/> The task launches all tests found in <strong>test/unit</strong>.<br/> <br/> If some tests fail, you can use the <strong>--trace</strong> option to have more<br/> information about the failures:<br/> <br/> <em>./symfony test:unit -t</em><br/> <br/> You can launch unit tests for a specific name:<br/> <br/> <em>./symfony test:unit strtolower</em><br/> <br/> You can also launch unit tests for several names:<br/> <br/> <em>./symfony test:unit strtolower strtoupper</em><br/> <br/> The task can output a JUnit compatible XML log file with the <strong>--xml</strong><br/> options:<br/> <br/> <em>./symfony test:unit --xml=log.xml</em>]]></help>
+    <params>name[=null]</params>
+  </command>
+  <help><![CDATA[Usage:<br/> symfony [options] task_name [arguments]<br/><br/>Options:<br/> --help -H Display this help message.<br/> --quiet -q Do not log messages to standard output.<br/> --trace -t Turn on invoke/execute tracing, enable full backtrace.<br/> --version -V Display the program version.<br/> --color Forces ANSI color output.<br/> --xml To output help as XML<br/><br/>Available tasks:<br/> :help Displays help for a task<br/> :list Lists tasks<br/>app<br/> :routes Displays current routes for an application<br/>cache<br/> :clear Clears the cache (cc)<br/>configure<br/> :author Configure project author<br/> :database Configure database DSN<br/>doctrine<br/> :build Generate code based on your schema<br/> :build-db Creates database for current model (doctrine:create-db)<br/> :build-filters Creates filter form classes for the current model<br/> :build-forms Creates form classes for the current model<br/> :build-model Creates classes for the current model<br/> :build-schema Creates a schema from an existing database<br/> :build-sql Creates SQL for the current model<br/> :clean-model-files Delete all generated model classes for models which no longer exist in your YAML schema (doctrine:clean)<br/> :create-model-tables Drop and recreate tables for specified models.<br/> :data-dump Dumps data to the fixtures directory<br/> :data-load Loads YAML fixture data<br/> :delete-model-files Delete all the related auto generated files for a given model name.<br/> :dql Execute a DQL query and view the results<br/> :drop-db Drops database for current model<br/> :generate-admin Generates a Doctrine admin module<br/> :generate-migration Generate migration class<br/> :generate-migrations-db Generate migration classes from existing database connections<br/> :generate-migrations-diff Generate migration classes by producing a diff between your old and new schema.<br/> :generate-migrations-models Generate migration classes from an existing set of models<br/> :generate-module Generates a Doctrine module<br/> :generate-module-for-route Generates a Doctrine module for a route definition<br/> :insert-sql Inserts SQL for current model<br/> :migrate Migrates database to current/specified version<br/>generate<br/> :app Generates a new application<br/> :module Generates a new module<br/> :project Generates a new project<br/> :task Creates a skeleton class for a new task<br/>i18n<br/> :extract Extracts i18n strings from php files<br/> :find Finds non "i18n ready" strings in an application<br/>log<br/> :clear Clears log files<br/> :rotate Rotates an application's log files<br/>plugin<br/> :add-channel Add a new PEAR channel<br/> :install Installs a plugin<br/> :list Lists installed plugins<br/> :publish-assets Publishes web assets for all plugins<br/> :uninstall Uninstalls a plugin<br/> :upgrade Upgrades a plugin<br/>project<br/> :clear-controllers Clears all non production environment controllers<br/> :deploy Deploys a project to another server<br/> :disable Disables an application in a given environment<br/> :enable Enables an application in a given environment<br/> :optimize Optimizes a project for better performance<br/> :permissions Fixes symfony directory permissions<br/> :send-emails Sends emails stored in a queue<br/> :validate Finds deprecated usage in a project<br/>symfony<br/> :test Launches the symfony test suite<br/>test<br/> :all Launches all tests<br/> :coverage Outputs test code coverage<br/> :functional Launches functional tests<br/> :unit Launches unit tests<br/>]]></help>
+</framework>
+

@@ -1,0 +1,81 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+#--------------------------------------#
+#Общие роуты
+
+homepage:
+  url:   /
+  param: { module: start, action: index }
+
+error:
+  url: /error
+  param: {module: sections, action: error}
+
+#--------------------------------------#
+
+#--------------------------------------#
+# Роуты для типовых разделов (Model::Section)
+
+sections:
+  url:  /sections
+  param: { module: sections, action: index }
+
+new_section:
+  url: /sections/new
+  param: { module: sections, action: new }
+
+new_subsection_for_section:
+  url: /sections/new/:parent
+  param: { module: sections, action: new }
+
+create_section:
+  url: /sections/create
+  param: { module: sections, action: create }
+
+update_section:
+  url: /sections/update
+  param: { module: sections, action: update }
+
+delete_section:
+  url: /sections/delete/:id
+  param: { module: sections, action: delete }
+
+edit_section:
+  url: /sections/edit/:id
+  param: { module: sections, action: edit }
+
+sections_level:
+  url:  /sections/:slug
+  param: { module: sections, action: index }
+
+#--------------------------------------#
+
+#--------------------------------------#
+# Роуты для контента (Model::Content)
+
+content:
+  url: /content
+  param: { module: content, action: index }
+
+new_content:
+  url: /content/new
+  param: { module: content, action: new }
+
+edit_content:
+  url: /content/edit/:id
+  param: { module: content, action: edit}
+
+create_content:
+  url: /content/create
+  param: { module: content, action: create }
+
+update_content:
+  url: /content/update
+  param: { module: content, action: update }
+
+delete_content:
+  url: /content/delete/:id
+  param: { module: content, action: update }
+
+#--------------------------------------#
