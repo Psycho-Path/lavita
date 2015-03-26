@@ -1,0 +1,320 @@
+/*** START SCREEN BEGINS ***/
+#admin-wrapper
+{
+    background-image: url(/images/lavita_main_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    overflow:auto;
+}
+#admin-start-wrapper
+{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    background-color: rgba(221, 221, 221, 0.85);
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-400px;/* half width*/
+    margin-top:-200px;/* half height*/
+    padding: 1%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 6px;
+}
+
+.left-button
+{
+    display: table;
+    position: relative;
+    float: left;
+    background-color: #73B65A;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.right-button
+{
+    display: table;
+    position: relative;
+    float: right;
+    background-color: #E75C58;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+a.right-button :hover
+{
+    background-color: #dd3333;
+}
+
+a.left-button :hover
+{
+    background-color: forestgreen;
+}
+
+.right-button span
+{
+    display: table-cell;
+    vertical-align: middle;
+    color: #ffffff;
+    font-size: 42px;
+}
+
+.left-button span
+{
+    display: table-cell;
+    vertical-align: middle;
+    color: #ffffff;
+    font-size: 42px;
+}
+
+div#admin-start-wrapper span.admin-start-screen-shadow-box
+{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/*** START SCREEN ENDS ***/
+
+
+/*** SECTIONS SCREEN BEGINS ***/
+
+div.section-screen-top-titles
+{
+    margin: 20px;
+}
+
+div.section-screen-table-wrapper
+{
+    margin: 0 20px;
+    background-color: rgba(221, 221, 221, 0.85);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 6px;
+}
+
+table.section-screen-table
+{
+    background-color: linen;
+    width: 100%;
+    color: #ffffff;
+    border-collapse: collapse;
+
+}
+
+table.section-screen-table th
+{
+    height: 44px;
+    background-color: #73B65A;
+    font-size: 21px;
+}
+
+table.section-screen-table tbody tr
+{
+    height: 44px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    font-size: 17px;
+}
+
+table.section-screen-table tbody tr.even
+{
+    height: 44px;
+    background-color: #e3fadc;
+}
+
+table.section-screen-table tbody tr td
+{
+    border: 1px solid #dddddd;
+    color: #464646;
+}
+
+table.section-screen-table tbody tr td a:link
+{
+    color: #464646;
+    text-decoration: none;
+}
+
+table.section-screen-table tbody tr td a:visited
+{
+    color: #464646;
+    text-decoration: none;
+}
+
+div.section-screen-navigation a div.section-screen-navigation-add-new
+{
+    display: table;
+    width: 33%;
+    height: 44px;
+    background-color: #73B65A;
+    color: #ffffff;
+    text-align: center;
+    font-size: 21px;
+    float: left;
+    border: 0;
+    border-radius: 3px;
+}
+
+/*** SECTIONS SCREEN ENDS ***/
+
+
+
+/*** SECTIONS FORM BEGINS ***/
+
+div.section-screen-form-wrapper
+{
+    margin: 0 25%;
+    background-color: rgba(221, 221, 221, 0.85);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 6px;
+}
+
+form.sections-form
+{
+    background-color: #73B65A;
+    padding: 10px;
+    margin: 0 auto 10px;
+}
+
+form.sections-form table.sections-form-table tr
+{
+    height: 44px;
+}
+
+form.sections-form table.sections-form-table tr td.sections-form-description
+{
+    text-align: right;
+    font-size: 21px;
+    color: #ffffff;
+}
+
+form.sections-form table.sections-form-table tr td input[type="text"]
+{
+    width: 230px;
+    height: 30px;
+    background-color: #e3fadc;
+    color: #464646;
+    font-size: 17px;
+    border: 0;
+    border-radius: 3px;
+    text-align: center;
+}
+
+form.sections-form table.sections-form-table tr td input[type="text"]:focus
+{
+    outline: none;
+    border: solid 1px #3cb623;
+    box-shadow: 0 0 5px 1px #088120;
+}
+
+form.sections-form table.sections-form-table tr td input[type="checkbox"]
+{
+    border: 0;
+}
+
+form.sections-form table.sections-form-table tr td input[type="checkbox"]:focus
+{
+    outline: none;
+    border: solid 1px #3cb623;
+    box-shadow: 0 0 5px 1px #088120;
+}
+
+form.sections-form table.sections-form-table tr td select
+{
+    width: 230px;
+    height: 30px;
+    background-color: #e3fadc;
+    color: #464646;
+}
+
+form.sections-form table.sections-form-table tr td select:focus
+{
+    outline: none;
+    border: solid 1px #3cb623;
+    box-shadow: 0 0 5px 1px #088120;
+}
+
+form.sections-form input[type="submit"]
+{
+    height: 44px;
+    width: 40%;
+    background-color: #e3fadc;
+    border: 0;
+    border-radius: 3px;
+    margin: 20px 31.5% 10px;
+    cursor: pointer;
+}
+
+form.sections-form input[type="submit"]:focus
+{
+    outline: none;
+    border: solid 1px #3cb623;
+    box-shadow: 0 0 5px 1px #088120;
+}
+
+div.section-screen-navigation
+{
+    background-color: rgba(221, 221, 221, 0.85);
+    margin: 2% 25%;
+    padding: 10px;
+    height: 44px;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+div.section-screen-navigation a:link
+{
+    text-decoration: none;
+}
+
+div.section-screen-navigation a:visited
+{
+    text-decoration: none;
+}
+
+div.section-screen-navigation a div.section-screen-navigation-back
+{
+    display: table;
+    width: 33%;
+    height: 44px;
+    background-color: #73B65A;
+    color: #ffffff;
+    text-align: center;
+    font-size: 21px;
+    float: left;
+    border: 0;
+    border-radius: 3px;
+}
+
+div.section-screen-navigation a div.section-screen-navigation-delete
+{
+    display: table;
+    width: 33%;
+    height: 44px;
+    background-color: #E75C58;
+    color: #ffffff;
+    text-align: center;
+    font-size: 21px;
+    float: right;
+    border: 0;
+    border-radius: 3px;
+}
+
+div.section-screen-navigation a div span
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*** SECTIONS FORM ENDS ***/
