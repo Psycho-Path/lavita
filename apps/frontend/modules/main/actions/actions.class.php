@@ -43,6 +43,14 @@ class mainActions extends sfActions
         $subSlug = $request->getParameter("sub_slug");
         $thirdLevelSlug = $request->getParameter("sub_sub_slug");
 
+        $rootSection = SectionTable::getInstance()->findOneBy("parent_id", 0);
+
+        $this->firstLevelSections = SectionTable::getInstance()
+            ->createQuery('fls')
+            ->select('fls.*')
+            ->where('fls.parent_id = ?', $rootSection->getId())
+            ->execute();
+
         $content = null;
         $this->slug = $slug;
 
@@ -50,7 +58,7 @@ class mainActions extends sfActions
         {
             //It means that this is childless section e.g. Medicine article or News Article
             $content = $this->getThirdLevelSectionContentBySlugs($thirdLevelSlug);
-//            $this->html = $content->getHtml();
+            $this->html = $content->getHtml();
             $this->slug = $thirdLevelSlug;
         }
         else
@@ -60,14 +68,14 @@ class mainActions extends sfActions
             {
                 //It means that we're in second level section
                 $content = $this->getSecondLevelSectionContentBySlugs($subSlug);
-//                $this->html = $content->getHtml();
+                $this->html = $content->getHtml();
                 $this->slug = $subSlug;
             }
             else if($slug)
             {
                 //That means that we're in one of first-level sections
                 $content = $this->getFirstLevelSectionContentBySlug($slug);
-//                $this->html = $content->getHtml();
+                $this->html = $content->getHtml();
                 $this->slug = $slug;
             }
             else
