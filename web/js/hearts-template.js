@@ -1,3 +1,4 @@
+/**test**/
 $(window).on('load', function () {
       intervals1();
     });
