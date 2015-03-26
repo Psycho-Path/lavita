@@ -43,12 +43,15 @@ class mainActions extends sfActions
         $subSlug = $request->getParameter("sub_slug");
         $thirdLevelSlug = $request->getParameter("sub_sub_slug");
 
-        $this->content = null;
+        $content = null;
+        $this->slug = $slug;
 
         if($thirdLevelSlug)
         {
             //It means that this is childless section e.g. Medicine article or News Article
-            $this->content = $this->getThirdLevelSectionContentBySlugs($thirdLevelSlug);
+            $content = $this->getThirdLevelSectionContentBySlugs($thirdLevelSlug);
+//            $this->html = $content->getHtml();
+            $this->slug = $thirdLevelSlug;
         }
         else
         {
@@ -56,12 +59,16 @@ class mainActions extends sfActions
             if($subSlug)
             {
                 //It means that we're in second level section
-                $this->content = $this->getSecondLevelSectionContentBySlugs($subSlug);
+                $content = $this->getSecondLevelSectionContentBySlugs($subSlug);
+//                $this->html = $content->getHtml();
+                $this->slug = $subSlug;
             }
             else if($slug)
             {
                 //That means that we're in one of first-level sections
-                $this->content = $this->getFirstLevelSectionContentBySlug($slug);
+                $content = $this->getFirstLevelSectionContentBySlug($slug);
+//                $this->html = $content->getHtml();
+                $this->slug = $slug;
             }
             else
             {
