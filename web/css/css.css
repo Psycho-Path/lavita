@@ -1,262 +1,1028 @@
 body,html,h1,p {
-    padding:0;
-    margin: 0;
+	padding:0;
+	margin: 0;
 }
 
 body {
-    height: 100%;
+	height: 100%;
 }
 
 .clear {
-    clear: both;
+	clear: both;
 }
 
 
 img {
-    border: 0;
-    display: block;
+	border: 0;
+	display: block;
 }
 
 #background {
-    background-image: url(/images/lavita_main_bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-}
-
-.wrap {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-}
-
-.content-wrap {
-    position: absolute;
-    top: 30px;
-    left: 10%;
-    z-index: 2;
-    /*width: 80%;*/
-    width: 1600px;
-    /*height: 80%;*/
-    height: 1000px;
-    margin: 0px auto;
-    /*margin-bottom: 10px;*/
-
-    /*overflow: hidden;*/
-
-    border-radius: 25px;
-
-    background: #fff;
-    -moz-box-shadow: 0 0 60px 5px #a8a8a8;
-    -webkit-box-shadow: 0 0 60px 5px #a8a8a8;
-    box-shadow: 0 0 60px 5px #a8a8a8;
-
-    -webkit-transform-origin: left top;
-    -moz-transform-origin: left top;
-    -ms-transform-origin: left top;
-    -o-transform-origin: left top;
-    transform-origin: left top;
-}
-
-.content-wrap .head-wrap {
-    width: 100%;
-    height: 15%;
-    position: relative;
-    border-top-left-radius:25px;
-    border-top-right-radius:25px;
-
-    background: rgb(255,255,255); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(241,212,211,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(241,212,211,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,212,211,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,212,211,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,212,211,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(241,212,211,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f1d4d3',GradientType=0 ); /* IE6-9 */
-
-}
-
-.content-wrap .head-wrap .logo {
-    position: absolute;
-    left: 3.4%;
-    top: 7%;
-    height: 90%;
-}
-
-
-.content-wrap .head-wrap .menu {
-    padding-left: 0;
-    float: right;
-    margin-right: 35px;
-    margin-top: 45px;
-    position: relative;
-}
-
-
-.content-wrap .head-wrap .hearts1 {
-    position: absolute;
-    top: -22px;
-    right: 379px;
-    width: 49px;
-}
-
-.content-wrap .head-wrap .hearts2 {
-    position: absolute;
-    bottom: -26px;
-    right: 91px;
-    width: 104px;
-}
-
-.content-wrap .head-wrap .menu li {
-    display: inline-block;
-    font-family: 'Scada', sans-serif;
-    position: relative;
-}
-
-
-
-.content-wrap .head-wrap .menu li a {
-    font-size: 24px;
-    color: #5e6263;
-    text-decoration: none;
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 50px;
-    height: 60px;
-    max-width: 170px;
-    line-height: 20px;
-    padding-right: 10px;
-}
-
-.content-wrap .head-wrap .menu li:nth-of-type(3) a {
-    max-width: 140px;
-}
-
-.content-wrap .head-wrap .menu li.btn-1 {
-    background-image: url('/images/icon-btn-1.svg');
-    background-repeat: no-repeat;
-    background-position: 15px;
-}
-
-.content-wrap .head-wrap .menu li.btn-2 {
-    background-image: url('/images/icon-btn-2.svg');
-    background-repeat: no-repeat;
-    background-position: 15px;
-}
-
-.content-wrap .head-wrap .menu li.btn-3 {
-    background-image: url('/images/icon-btn-3.svg');
-    background-repeat: no-repeat;
-    background-position: 10px;
-}
-
-.content-wrap .head-wrap .menu li.btn-4 {
-    background-image: url('/images/icon-btn-4.svg');
-    background-repeat: no-repeat;
-    background-position: 15px;
-}
-
-.content-wrap .head-wrap .menu li {
-    background-size: auto 40px;
-    background-position: 1px;
-}
-
-.content-wrap .content.main {
-    height: 85%;
-    position: relative;
-}
-
-.content-wrap .content.main .upper {
-    height: 50%;
-    position: relative;
-}
-
-.content-wrap .content.main .upper .left {
-    height: 65%;
-    position: absolute;
-    top: 120px;
-    left: 245px;
-}
-
-.content-wrap .content.main .upper .right {
-    width: 35%;
-    font-family: 'Istok Web', sans-serif;
-    position: absolute;
-    right: 7.4%;
-    top: 17.7%;
-    color: #231f20;
-    font-size: 24px;
-}
-
-.content-wrap .content.main .upper .right span {
-    color: #ed2324;
-}
-
-.content-wrap .content.main .down {
-    height: 50%;
-    position: relative;
-    border-bottom-left-radius:25px;
-    border-bottom-right-radius:25px;
-
-    background: rgb(246,188,190); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(246,188,190,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,188,190,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(246,188,190,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(246,188,190,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(246,188,190,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(246,188,190,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6bcbe', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-
-}
-
-.content-wrap .content.main .down .left {
-    height: 88.7%;
-    position: absolute;
-    top: 25px;
-    left: 30px;
-}
-
-.content-wrap .content.main .down img.right {
-    position: absolute;
-    right: 14.5%;
-    top: 21px;
-    width: 25.5%;
-}
-
-.content-wrap .content.main .down p.right {
-    width: 35%;
-    font-family: 'Istok Web', sans-serif;
-    position: absolute;
-    right: 7.4%;
-    top: 29.5%;
-    color: #ed2324;
-    font-size: 41px;
-    font-weight: bold;
-    line-height: 45px;
-}
-
-.content-wrap .content.main .down a.right {
-    color: #ed2324;
-    font-style: italic;
-    font-weight: bold;
-    width: 36%;
-    font-family: 'Istok Web', sans-serif;
-    position: absolute;
-    right: 6.4%;
-    top: 72.7%;
-    font-size: 18px;
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 1;
 }
 
 .warning {
-    top: 89.3333%;
-    width: 90%;
-    /*width: 1600px;*/
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
+	top: 89.3333%;
+	width: 90%;
+	/*width: 1600px;*/
+	margin: 0 auto;
+	position: relative;
+	z-index: 2;
 
 }
+
+.wrap {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+}
+
+.content-wrap {
+	position: absolute;
+	top: 30px;
+	left: 10%;
+	z-index: 2;
+	/*width: 80%;*/
+	width: 1600px;
+	/*height: 80%;*/
+	height: 1000px;
+	margin: 0px auto;
+	/*margin-bottom: 10px;*/
+
+	/*overflow: hidden;*/
+
+	border-radius: 25px;
+
+	background: #fff;
+	-moz-box-shadow: 0 0 60px 5px #a8a8a8;
+	-webkit-box-shadow: 0 0 60px 5px #a8a8a8;
+	box-shadow: 0 0 60px 5px #a8a8a8;
+
+	-webkit-transform-origin: left top;
+	-moz-transform-origin: left top;
+	-ms-transform-origin: left top;
+	-o-transform-origin: left top;
+	transform-origin: left top;
+}
+
+	.content-wrap .head-wrap {
+		width: 100%;
+		height: 15%;
+		position: relative;
+		border-top-left-radius:25px;
+		border-top-right-radius:25px;
+
+		background: rgb(255,255,255); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(241,212,211,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(241,212,211,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,212,211,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,212,211,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,212,211,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(241,212,211,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f1d4d3',GradientType=0 ); /* IE6-9 */
+
+	}
+
+		.content-wrap .head-wrap .logo {
+			position: absolute;
+			left: 3.4%;
+			top: 7%;
+			height: 90%;
+		}
+
+
+		.content-wrap .head-wrap .menu {
+			padding-left: 0;
+			float: right;
+			margin-right: 35px;
+			margin-top: 45px;
+			position: relative;
+		}
+
+
+		.content-wrap .head-wrap .hearts1 {
+			position: absolute;
+			top: -22px;
+			right: 379px;
+			width: 49px;
+		}
+
+		.content-wrap .head-wrap .hearts2 {
+			position: absolute;
+			bottom: -26px;
+			right: 91px;
+			width: 104px;
+		}
+
+			.content-wrap .head-wrap .menu li {
+				display: inline-block;
+				font-family: 'Scada', sans-serif;
+				position: relative;
+			}
+
+				
+
+				.content-wrap .head-wrap .menu li a {
+					font-size: 24px;
+					color: #5e6263;
+					text-decoration: none;
+					display: table-cell;
+					vertical-align: middle;
+					padding-left: 50px;
+					height: 60px;
+					max-width: 170px;
+					line-height: 20px;
+					padding-right: 10px;
+				}
+
+					.content-wrap .head-wrap .menu li:nth-of-type(3) a {
+						max-width: 140px;
+					}
+
+				.content-wrap .head-wrap .menu li.btn-1 {
+					background-image: url('../img/icon-btn-1.svg');
+					background-repeat: no-repeat;
+					background-position: 15px;
+				}
+
+				.content-wrap .head-wrap .menu li.btn-2 {
+					background-image: url('../img/icon-btn-2.svg');
+					background-repeat: no-repeat;
+					background-position: 15px;
+				}
+
+				.content-wrap .head-wrap .menu li.btn-3 {
+					background-image: url('../img/icon-btn-3.svg');
+					background-repeat: no-repeat;
+					background-position: 10px;
+				}
+
+				.content-wrap .head-wrap .menu li.btn-4 {
+					background-image: url('../img/icon-btn-4.svg');
+					background-repeat: no-repeat;
+					background-position: 15px;
+				}
+
+				.content-wrap .head-wrap .menu li {
+					background-size: auto 40px;
+					background-position: 1px;
+				}
+
+	.content-wrap .content.main {
+		height: 85%;
+		position: relative;
+	}
+
+		.content-wrap .content.main .upper {
+			height: 50%;
+			position: relative;
+		}
+
+			.content-wrap .content.main .upper .left {
+				height: 65%;
+				position: absolute;
+				top: 120px;
+				left: 245px;
+			}
+
+			.content-wrap .content.main .upper .right {
+				width: 35%;
+				font-family: 'Istok Web', sans-serif;
+				position: absolute;
+				right: 7.4%;
+				top: 17.7%;
+				color: #231f20;
+				font-size: 24px;
+			}
+
+				.content-wrap .content.main .upper .right span {
+					color: #ed2324;
+				}
+
+		.content-wrap .content.main .down {
+			height: 50%;
+			position: relative;
+			border-bottom-left-radius:25px;
+			border-bottom-right-radius:25px;
+
+			background: rgb(246,188,190); /* Old browsers */
+			background: -moz-linear-gradient(top,  rgba(246,188,190,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,188,190,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  rgba(246,188,190,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  rgba(246,188,190,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  rgba(246,188,190,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  rgba(246,188,190,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6bcbe', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+		}
+
+			.content-wrap .content.main .down .left {
+				height: 88.7%;
+				position: absolute;
+				top: 25px;
+				left: 30px;
+			}
+
+			.content-wrap .content.main .down img.right {
+				  position: absolute;
+				  right: 14.5%;
+				  top: 21px;
+				  width: 25.5%;
+			}
+
+			.content-wrap .content.main .down p.right {
+				width: 35%;
+				font-family: 'Istok Web', sans-serif;
+				position: absolute;
+				right: 7.4%;
+				top: 29.5%;
+				color: #ed2324;
+				font-size: 41px;
+				font-weight: bold;
+				line-height: 45px;
+			}
+
+			.content-wrap .content.main .down a.right {
+				color: #ed2324;
+				font-style: italic;
+				font-weight: bold;
+				width: 38%;
+				font-family: 'Istok Web', sans-serif;
+				position: absolute;
+				right: 4.4%;
+				top: 72.7%;
+				font-size: 18px;
+			}
+
+
+
+
+
+
+/***********************Women-health*******************************/
+	
+
+
+
+	.content-wrap .content.women-health {
+		height: 85%;
+		position: relative;
+	}
+
+		.content-wrap .content.women-health h2 {
+			width: 100%;
+			margin: 0 auto;
+			font-family: 'Scada', sans-serif;
+			font-weight: bold;
+			color: #ed2324;
+			text-align: center;
+			font-size: 33px;
+			padding-top: 25px;
+
+		}
+
+		.content-wrap .content.women-health img.shadows {
+			position: absolute;
+			bottom: 1.5%;
+			left: 29.2%;
+			height: 88.8%;
+		}
+
+		.content-wrap .content.women-health img.women {
+			position: absolute;
+			bottom: 0;
+			left: 35.9%;
+			height: 62.3%;
+		}
+
+		.content-wrap .content.women-health img.hearts {
+			position: absolute;
+			top: 28.2%;
+			left: 6.6%;
+			width: 13.9%;
+		}
+
+
+		.content-wrap .content.women-health .heart {
+			position: absolute;
+			display: block;
+			text-decoration: none;
+			
+		}
+
+			.content-wrap .content.women-health .heart p {
+				width: 100%;
+				text-align: center;
+				color: #ed2324;
+				font-family: 'Scada', sans-serif;
+				font-size: 20px;
+				position: relative;
+				top: -20px;
+			}
+
+			
+
+				.content-wrap .content.women-health .heart .wrap .left {
+					
+		    		width: 50%;
+		    		height: 100%;
+		    		position: absolute;
+		    		top: 0;
+		    		left: 0;
+
+		    		-webkit-transform-style: preserve-3d;
+		    		transform-style: preserve-3d;
+		    		
+		    		image-rendering: -moz-crisp-edges;
+				}
+
+
+					.content-wrap .content.women-health .heart .wrap .left img {
+						position: relative;
+						top: 0px;
+
+						backface-visibility: hidden;
+						-moz-backface-visibility: hidden;
+						-webkit-backface-visibility: hidden;
+
+						-webkit-transform-origin: right center;
+						transform-origin: right center;
+
+						-webkit-transition: all 1.5s ease;
+						-moz-transition: all 1.5s ease;
+						-ms-transition: all 1.5s ease;
+						-o-transition: all 1.5s ease;
+						transition: all 1.5s ease;
+
+						-webkit-transform:rotateY(0deg) perspective(900px);
+						transform:rotateY(0deg) perspective(900px);
+					}
+
+						.content-wrap .content.women-health .heart .wrap.active .left img {
+							-webkit-transform:rotateY(80deg) perspective(900px);
+							transform:rotateY(80deg) perspective(900px);
+						}
+
+
+				.content-wrap .content.women-health .heart .wrap .right {
+					
+		    		width: 50%;
+		    		height: 100%;
+		    		position: absolute;
+		    		top: 0;
+		    		left: 50%;
+
+		    		-webkit-transform-style: preserve-3d;
+		    		transform-style: preserve-3d;
+
+		    		image-rendering: -moz-crisp-edges;
+				}
+
+					.content-wrap .content.women-health .heart .wrap .right img {
+						position: relative;
+						top: 1px;
+
+						backface-visibility: hidden;
+						-moz-backface-visibility: hidden;
+						-webkit-backface-visibility: hidden;
+
+						-webkit-transform-origin: left center;
+						transform-origin: left center;
+
+						-webkit-transition: all 1.5s ease;
+						-moz-transition: all 1.5s ease;
+						-ms-transition: all 1.5s ease;
+						-o-transition: all 1.5s ease;
+						transition: all 1.5s ease;
+
+						-webkit-transform:rotateY(0deg) perspective(900px);
+						transform:rotateY(0deg) perspective(900px);
+					}
+
+						.content-wrap .content.women-health .heart .wrap.active .right img {
+							-webkit-transform:rotateY(-80deg) perspective(900px);
+							transform:rotateY(-80deg) perspective(900px);
+						}
+
+				.content-wrap .content.women-health .heart .wrap img.shadow {
+					position: absolute;
+					opacity: 0;
+				}
+
+	.content-wrap .content.women-health .heart.heart-1 {
+		width: 182px;
+		height: 158px;
+		top: 347px;
+		left: 426px;
+	}
+
+	.content-wrap .content.women-health .heart.heart-1 .wrap {
+		-webkit-transform:rotate(-25deg) scale(0.55);
+		transform:rotate(-25deg) scale(0.55);
+	}
+
+	.content-wrap .content.women-health .heart.heart-1 p {
+		top: -35px;
+	}
+
+
+	.content-wrap .content.women-health .heart.heart-2 {
+		width: 182px;
+		height: 158px;
+		top: 123px;
+		left: 553px;
+	}
+
+	.content-wrap .content.women-health .heart.heart-2 .wrap {
+		-webkit-transform:rotate(-10deg) scale(0.6);
+		transform:rotate(-10deg) scale(0.6);
+	}
+
+	.content-wrap .content.women-health .heart.heart-2 p {
+		top: -35px;
+	}
+
+
+	.content-wrap .content.women-health .heart.heart-3 {
+		width: 182px;
+		height: 160px;
+		top: 90px;
+		left: 786px;
+	}
+
+	.content-wrap .content.women-health .heart.heart-3 .wrap {
+		-webkit-transform:rotate(10deg) scale(0.7);
+		transform:rotate(10deg) scale(0.7);
+	}
+
+	.content-wrap .content.women-health .heart.heart-4 {
+		width: 182px;
+		height: 160px;
+		top: 201px;
+		left: 991px;
+	}
+
+	.content-wrap .content.women-health .heart.heart-4 .wrap {
+		-webkit-transform:rotate(25deg) scale(0.6);
+		transform:rotate(25deg) scale(0.6);
+	}
+
+	.content-wrap .content.women-health .heart.heart-4 p {
+		top: -35px;
+	}
+
+	.content-wrap .content.women-health .heart.heart-5 {
+		width: 182px;
+		height: 160px;
+		top: 436px;
+		left: 1054px;
+	}
+
+	.content-wrap .content.women-health .heart.heart-5 .wrap {
+		-webkit-transform:rotate(20deg) scale(0.45);
+		transform:rotate(20deg) scale(0.45);
+	}
+
+	.content-wrap .content.women-health .heart.heart-5 p {
+		top: -45px;
+	}
+
+	.content-wrap .content.women-health .heart.heart-6 {
+		width: 182px;
+		height: 160px;
+		top: 593px;
+		left: 990px;
+	}
+
+	.content-wrap .content.women-health .heart.heart-6 .wrap {
+		-webkit-transform:rotate(30deg) scale(0.45);
+		transform:rotate(30deg) scale(0.45);
+	}
+
+	.content-wrap .content.women-health .heart.heart-6 p {
+		top: -45px;
+	}
+
+	.content-wrap .content.women-health .heart.heart-7 {
+		width: 182px;
+		height: 160px;
+		top: 700px;
+		left: 795px;
+	}
+
+	.content-wrap .content.women-health .heart.heart-7 .wrap {
+		-webkit-transform:rotate(30deg) scale(0.35);
+		transform:rotate(30deg) scale(0.35);
+	}
+
+	.content-wrap .content.women-health .heart.heart-7 p {
+		top: -55px;
+	}
+
+
+
+.content-wrap .content.women-health-template {
+		height: 85%;
+		position: relative;
+	}
+
+		.content-wrap .content.women-health-template h2 {
+			font-family: 'Scada', sans-serif;
+			font-weight: bold;
+			color: #ed2324;
+			text-align: right;
+			font-size: 42px;
+			position: absolute;
+			right: 9.5%;
+			top: 15px;
+			line-height: 38px;
+
+		}
+
+		.content-wrap .content.women-health-template .p-wrap {
+			position: absolute;
+			right: 9.5%;
+			top: 150px;
+		}
+
+		.content-wrap .content.women-health-template a {
+			position: absolute;
+			right: 9.5%;
+			bottom: 120px;
+			color: #ed2324;
+			font-style: italic;
+			font-family: 'Scada', sans-serif;
+			font-size: 23px;
+		}
+
+		.content-wrap .content.women-health-template p {
+			text-align: right;
+			font-style: italic;
+			color: #000000;
+			font-size: 17px;
+			margin: 20px 0;
+			font-family: 'Istok Web', sans-serif;
+		}
+
+			.content-wrap .content.women-health-template p span {
+				color: #ed2324;
+				text-transform: uppercase;
+			}
+
+		.content-wrap .content.women-health-template img.shadows {
+			position: absolute;
+			top: 6.2%;
+			left: 8.8%;
+			height: 82.5%;
+		}
+
+		
+
+
+		.content-wrap .content.women-health-template .heart {
+			position: absolute;
+			display: block;
+			text-decoration: none;
+			
+		}
+
+			.content-wrap .content.women-health-template .heart p {
+				width: 100%;
+				text-align: center;
+				color: #ed2324;
+				font-family: 'Scada', sans-serif;
+				font-size: 20px;
+				position: relative;
+				top: -20px;
+				font-style: normal;
+			}
+
+			
+
+				.content-wrap .content.women-health-template .heart .wrap .left {
+					
+		    		width: 50%;
+		    		height: 100%;
+		    		position: absolute;
+		    		top: 0;
+		    		left: 0;
+
+		    		-webkit-transform-style: preserve-3d;
+		    		transform-style: preserve-3d;
+		    		
+		    		image-rendering: -moz-crisp-edges;
+				}
+
+
+					.content-wrap .content.women-health-template .heart .wrap .left img {
+						position: relative;
+						top: 0px;
+
+						backface-visibility: hidden;
+						-moz-backface-visibility: hidden;
+						-webkit-backface-visibility: hidden;
+
+						-webkit-transform-origin: right center;
+						transform-origin: right center;
+
+						-webkit-transition: all 1.5s ease;
+						-moz-transition: all 1.5s ease;
+						-ms-transition: all 1.5s ease;
+						-o-transition: all 1.5s ease;
+						transition: all 1.5s ease;
+
+						-webkit-transform:rotateY(0deg) perspective(900px);
+						transform:rotateY(0deg) perspective(900px);
+					}
+
+						.content-wrap .content.women-health-template .heart .wrap.active .left img {
+							-webkit-transform:rotateY(80deg) perspective(900px);
+							transform:rotateY(80deg) perspective(900px);
+						}
+
+
+				.content-wrap .content.women-health-template .heart .wrap .right {
+					
+		    		width: 50%;
+		    		height: 100%;
+		    		position: absolute;
+		    		top: 0;
+		    		left: 50%;
+
+		    		-webkit-transform-style: preserve-3d;
+		    		transform-style: preserve-3d;
+
+		    		image-rendering: -moz-crisp-edges;
+				}
+
+					.content-wrap .content.women-health-template .heart .wrap .right img {
+						position: relative;
+						top: 1px;
+
+						backface-visibility: hidden;
+						-moz-backface-visibility: hidden;
+						-webkit-backface-visibility: hidden;
+
+						-webkit-transform-origin: left center;
+						transform-origin: left center;
+
+						-webkit-transition: all 1.5s ease;
+						-moz-transition: all 1.5s ease;
+						-ms-transition: all 1.5s ease;
+						-o-transition: all 1.5s ease;
+						transition: all 1.5s ease;
+
+						-webkit-transform:rotateY(0deg) perspective(900px);
+						transform:rotateY(0deg) perspective(900px);
+					}
+
+						.content-wrap .content.women-health-template .heart .wrap.active .right img {
+							-webkit-transform:rotateY(-80deg) perspective(900px);
+							transform:rotateY(-80deg) perspective(900px);
+						}
+
+				.content-wrap .content.women-health-template .heart .wrap img.shadow {
+					position: absolute;
+					opacity: 0;
+				}
+
+		.content-wrap .content.women-health-template .heart.heart-1 {
+			width: 182px;
+			height: 158px;
+			top: 405px;
+			left: 95px;
+		}
+
+			
+
+		.content-wrap .content.women-health-template .heart.heart-1 .wrap {
+			-webkit-transform:rotate(-45deg) scale(0.5);
+			transform:rotate(-45deg) scale(0.5);
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-1 p {
+			top: -50px;
+		}
+
+
+		.content-wrap .content.women-health-template .heart.heart-2 {
+			width: 182px;
+			height: 158px;
+			top: 168px;
+			left: 148px;
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-2 .wrap {
+			-webkit-transform:rotate(-35deg) scale(0.55);
+			transform:rotate(-35deg) scale(0.55);
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-2 p {
+			top: -53px;
+		}
+
+
+		.content-wrap .content.women-health-template .heart.heart-3 {
+			width: 182px;
+			height: 160px;
+			top: 72px;
+			left: 351px;
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-3 .wrap {
+			-webkit-transform:rotate(-10deg) scale(0.6);
+			transform:rotate(-10deg) scale(0.6);
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-3 p {
+			top: -50px;
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-4 {
+			width: 182px;
+			height: 160px;
+			top: 118px;
+			left: 563px;
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-4 .wrap {
+			-webkit-transform:rotate(10deg) scale(0.55);
+			transform:rotate(10deg) scale(0.55);
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-4 p {
+			top: -50px;
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-5 {
+			width: 182px;
+			height: 160px;
+			top: 312px;
+			left: 688px;
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-5 .wrap {
+			-webkit-transform:rotate(6deg) scale(0.45);
+			transform:rotate(6deg) scale(0.45);
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-5 p {
+			top: -60px;
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-6 {
+			width: 182px;
+			height: 160px;
+			top: 475px;
+			left: 678px;
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-6 .wrap {
+			-webkit-transform:rotate(20deg) scale(0.45);
+			transform:rotate(20deg) scale(0.45);
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-6 p {
+			top: -60px;
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-7 {
+			width: 182px;
+			height: 160px;
+			top: 622px;
+			left: 528px;
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-7 .wrap {
+			-webkit-transform:rotate(25deg) scale(0.3);
+			transform:rotate(25deg) scale(0.3);
+		}
+
+		.content-wrap .content.women-health-template .heart.heart-7 p {
+			top: -70px;
+		}
+
+/******************Women-health END*********************/
+
+
+
+/********************Women-health HEAD******************************/
+.content-wrap .content.women-health-template.head .heart.heart-1 .selected{
+	width: 167px;
+	position: absolute;
+	top: 16px;
+	left: 7px;
+}
+
+.content-wrap .content.women-health-template.head img.women {
+	position: absolute;
+	bottom: 0;
+	left: 17.9%;
+  	height: 69.4%;
+}
+/********************Women-health HEAD END***************************/
+
+/********************Women-health BEAUTY******************************/
+.content-wrap .content.women-health-template.beauty .heart.heart-2 .selected{
+	width: 167px;
+	position: absolute;
+	top: 16px;
+	left: 15px;
+}
+
+.content-wrap .content.women-health-template.beauty img.women {
+	position: absolute;
+	bottom: 0;
+	left: 17.9%;
+  	height: 63.4%;
+}
+/********************Women-health BEAUTY END***************************/
+
+/********************Women-health FORWOMEN******************************/
+.content-wrap .content.women-health-template.forwomen .heart.heart-3 .selected{
+	width: 167px;
+	position: absolute;
+	top: 16px;
+	left: 4px;
+}
+
+.content-wrap .content.women-health-template.forwomen img.women {
+	position: absolute;
+	bottom: 0;
+	left: 17.9%;
+  	height: 61.4%;
+}
+/********************Women-health FORWOMEN END***************************/
+
+/********************Women-health EYES******************************/
+.content-wrap .content.women-health-template.eyes .heart.heart-4 .selected{
+	width: 167px;
+	position: absolute;
+	top: 10px;
+	left: 12px;
+}
+
+.content-wrap .content.women-health-template.eyes img.women {
+	position: absolute;
+	bottom: 0;
+	left: 14.9%;
+  	height: 61.4%;
+}
+/********************Women-health EYES END***************************/
+
+/********************Women-health PISHA******************************/
+.content-wrap .content.women-health-template.pisha .heart.heart-5 .selected{
+	width: 162px;
+	position: absolute;
+	top: 21px;
+	left: 11px;
+}
+
+.content-wrap .content.women-health-template.pisha img.women {
+	position: absolute;
+	bottom: 0;
+	left: 16.9%;
+  	height: 63.4%;
+}
+/********************Women-health PISHA END***************************/
+
+/********************Women-health HEART******************************/
+.content-wrap .content.women-health-template.heart .heart.heart-6 .selected{
+	width: 151px;
+	position: absolute;
+	top: 14px;
+	left: 14px;
+}
+
+.content-wrap .content.women-health-template.heart img.women {
+	position: absolute;
+	bottom: 0;
+	left: 15.9%;
+  	height: 61.4%;
+}
+/********************Women-health HEART END***************************/
+
+/********************Women-health IMMUN******************************/
+.content-wrap .content.women-health-template.immun .heart.heart-7 .selected{
+	width: 132px;
+	position: absolute;
+	top: 29px;
+	left: 25px;
+}
+
+.content-wrap .content.women-health-template.immun img.women {
+	position: absolute;
+	bottom: 47px;
+	left: 18.9%;
+  	height: 61.4%;
+}
+
+.content-wrap .content.women-health-template.immun a {
+	bottom: 50px;
+}
+/********************Women-health IMMUN END***************************/
+
+
+
+
+
+
+
+
+
+/**test**/
+
+
+/**********************VITAMIN - MAIN*****************************/
+
+.content-wrap .content.vitamin-main {
+		height: 85%;
+		position: relative;
+	}
+
+	
+	.content-wrap .content.vitamin-main p.first {
+		color: #ed2324;
+		font-family: "Istok Web", sans-serif;
+		font-size: 20px;
+		text-align: justify;
+		width: 65.5%;
+		margin: 0px auto;
+		padding-top: 70px;
+		line-height: 25px;
+	}
+
+	.content-wrap .content.vitamin-main p.second {
+		color: #231f20;
+		font-family: "Istok Web", sans-serif;
+		font-size: 20px;
+		text-align: justify;
+		width: 65.5%;
+		margin: 20px auto;
+		line-height: 25px;
+	}
+
+
+	.content-wrap .content.vitamin-main .footer-wrap {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 12.5%;
+		display: table;
+
+		border-bottom-left-radius:25px;
+		border-bottom-right-radius:25px;
+
+
+		background: rgb(240,213,219); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(240,213,219,1) 0%, rgba(253,250,251,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(240,213,219,1)), color-stop(100%,rgba(253,250,251,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(240,213,219,1) 0%,rgba(253,250,251,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(240,213,219,1) 0%,rgba(253,250,251,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(240,213,219,1) 0%,rgba(253,250,251,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(240,213,219,1) 0%,rgba(253,250,251,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0d5db', endColorstr='#fdfafb',GradientType=0 ); /* IE6-9 */
+
+	}
+
+
+		.content-wrap .content.vitamin-main .footer-wrap a {
+			color: #ed2324;
+			font-style: italic;
+			font-family: "Istok Web", sans-serif;
+			font-size: 24px;
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+
+
+
+
+
+/**********************VITAMIN - MAIN END*****************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
