@@ -120,3 +120,32 @@ Mar 21 16:30:33 symfony [info] {sfWebDebugLogger} Action "main/index" 66.35 ms (
 Mar 21 16:30:33 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.68 ms (3)
 Mar 21 16:30:33 symfony [info] {sfWebDebugLogger} View "Success" for "main/index" 15.23 ms (1)
 Mar 21 16:30:33 symfony [info] {sfWebResponse} Send content (34839 o)
+Mar 26 16:13:00 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'index',)
+Mar 26 16:13:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 26 16:13:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 26 16:13:01 symfony [info] {mainActions} Call "mainActions->executeIndex()"
+Mar 26 16:13:01 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 26 16:13:01 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.slug AS s__slug, s.parent_id AS s__parent_id, s.type AS s__type, s.priority AS s__priority, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM section s WHERE (s.parent_id = ?) LIMIT 1 - (0)
+Mar 26 16:13:01 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.slug AS s__slug, s.parent_id AS s__parent_id, s.type AS s__type, s.priority AS s__priority, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM section s WHERE (s.parent_id = ?) - (3)
+Mar 26 16:13:01 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.html AS c__html, c.section_id AS c__section_id, c.visibility AS c__visibility, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM content c WHERE (c.section_id = ?) LIMIT 1 - (3)
+Mar 26 16:15:42 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'index',)
+Mar 26 16:15:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 26 16:15:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 26 16:15:43 symfony [info] {mainActions} Call "mainActions->executeIndex()"
+Mar 26 16:15:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 26 16:15:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.slug AS s__slug, s.parent_id AS s__parent_id, s.type AS s__type, s.priority AS s__priority, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM section s WHERE (s.parent_id = ?) LIMIT 1 - (0)
+Mar 26 16:15:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.slug AS s__slug, s.parent_id AS s__parent_id, s.type AS s__type, s.priority AS s__priority, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM section s WHERE (s.parent_id = ?) - (3)
+Mar 26 16:15:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.html AS c__html, c.section_id AS c__section_id, c.visibility AS c__visibility, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM content c WHERE (c.section_id = ?) LIMIT 1 - (3)
+Mar 26 16:15:43 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/modules/main/templates/indexSuccess.php"
+Mar 26 16:15:43 symfony [info] {sfPHPView} Decorate content with "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 26 16:15:43 symfony [info] {sfPHPView} Render "/Users/newapple/Sites/Lavita/apps/frontend/templates/layout.php"
+Mar 26 16:15:43 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 26 16:15:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 26 16:15:43 symfony [warning] {sfWebDebugLogger}  Warning at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /Users/newapple/Sites/Lavita/lib/vendor/symfony/lib/response/sfWebResponse.class.php:409))
+Mar 26 16:15:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 26 16:15:43 symfony [info] {sfWebDebugLogger} Configuration 43.82 ms (10)
+Mar 26 16:15:43 symfony [info] {sfWebDebugLogger} Factories 121.13 ms (1)
+Mar 26 16:15:43 symfony [info] {sfWebDebugLogger} Action "main/index" 132.28 ms (1)
+Mar 26 16:15:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 4.73 ms (4)
+Mar 26 16:15:43 symfony [info] {sfWebDebugLogger} View "Success" for "main/index" 76.21 ms (1)
+Mar 26 16:15:43 symfony [info] {sfWebResponse} Send content (36638 o)
