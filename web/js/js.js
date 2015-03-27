@@ -2,6 +2,7 @@
 $(function(){
 	scale();
 
+	vitaminActive();
 	
 });
 
@@ -65,3 +66,13 @@ function scale () {
 			 }
 }
 
+function vitaminActive () {
+
+	var show = $('.vitamin-template .show');
+	show.click(function(){
+		$('.vitamin-template .show.active').removeClass('active');
+		$('.vitamin-template .hidden.active').removeClass('active');
+		$(this).addClass('active');
+		$(this).next().addClass('active');
+	});
+}

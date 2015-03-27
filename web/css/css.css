@@ -11,6 +11,11 @@ body {
 	clear: both;
 }
 
+ul,ol {
+	font-family: "Scada", sans-serif;
+	color: #231f20;
+	font-size: 20px;
+}
 
 img {
 	border: 0;
@@ -1005,9 +1010,163 @@ img {
 		}
 
 
+		.content-wrap .content.vitamin-main .vitamin-wrap {
+			width: 59.3%;
+			height: 38.6%;
+			margin: 0 auto;
+		}
+
+			.content-wrap .content.vitamin-main .vitamin-wrap .vitamin {
+				display: block;
+				height: 45%;
+				width: 115px;
+				position: relative;
+				float: left;
+				margin-right: 58px; 
+				margin-bottom: 5%;
+			}
+
+				
+
+					.content-wrap .content.vitamin-main .vitamin-wrap .vitamin .left {
+						
+			    		width: 50%;
+			    		height: 100%;
+			    		position: absolute;
+			    		top: 0;
+			    		left: 0;
+
+			    		-webkit-transform-style: preserve-3d;
+			    		transform-style: preserve-3d;
+			    		
+			    		image-rendering: -moz-crisp-edges;
+					}
 
 
+						.content-wrap .content.vitamin-main .vitamin-wrap .vitamin .left img {
+							height: 100%;
+							position: relative;
+							top: 0px;
 
+							backface-visibility: hidden;
+							-moz-backface-visibility: hidden;
+							-webkit-backface-visibility: hidden;
+
+							-webkit-transform-origin: right center;
+							transform-origin: right center;
+
+							-webkit-transition: all 1.5s ease;
+							-moz-transition: all 1.5s ease;
+							-ms-transition: all 1.5s ease;
+							-o-transition: all 1.5s ease;
+							transition: all 1.5s ease;
+
+							-webkit-transform:rotateY(0deg) perspective(900px);
+							transform:rotateY(0deg) perspective(900px);
+						}
+
+							.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.active .left img {
+								-webkit-transform:rotateY(80deg) perspective(900px);
+								transform:rotateY(80deg) perspective(900px);
+							}
+
+
+					.content-wrap .content.vitamin-main .vitamin-wrap .vitamin .right {
+						
+			    		width: 50%;
+			    		height: 100%;
+			    		position: absolute;
+			    		top: 0;
+			    		left: 50%;
+
+			    		-webkit-transform-style: preserve-3d;
+			    		transform-style: preserve-3d;
+
+			    		image-rendering: -moz-crisp-edges;
+					}
+
+						.content-wrap .content.vitamin-main .vitamin-wrap .vitamin .right img {
+							height: 100%;
+							position: relative;
+
+							backface-visibility: hidden;
+							-moz-backface-visibility: hidden;
+							-webkit-backface-visibility: hidden;
+
+							-webkit-transform-origin: left center;
+							transform-origin: left center;
+
+							-webkit-transition: all 1.5s ease;
+							-moz-transition: all 1.5s ease;
+							-ms-transition: all 1.5s ease;
+							-o-transition: all 1.5s ease;
+							transition: all 1.5s ease;
+
+							-webkit-transform:rotateY(0deg) perspective(900px);
+							transform:rotateY(0deg) perspective(900px);
+						}
+
+							.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.active .right img {
+								-webkit-transform:rotateY(-80deg) perspective(900px);
+								transform:rotateY(-80deg) perspective(900px);
+							}
+
+
+			.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.vitamin-2 {
+				width: 103px;
+			}
+
+			.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.vitamin-3 {
+				width: 153px;
+			}
+
+			.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.vitamin-4 {
+				width: 67px;
+			}
+
+			.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.vitamin-5 {
+				width: 81px;
+			}
+
+			.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.vitamin-6 {
+				width: 135px;
+				margin-right: 0;
+			}
+
+			.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.vitamin-7 {
+				width: 113px;
+				margin-right: 30px;
+			}
+
+			.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.vitamin-8 {
+				width: 113px;
+				margin-right: 30px;
+			}
+
+			.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.vitamin-9 {
+				width: 99px;
+				margin-right: 30px;
+			}
+
+			.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.vitamin-10 {
+				width: 159px;
+				margin-right: 30px;
+			}
+
+			.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.vitamin-11 {
+				width: 135px;
+				margin-right: 30px;
+			}
+
+			.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.vitamin-12 {
+				width: 61px;
+				margin-right: 30px;
+			}
+
+			.content-wrap .content.vitamin-main .vitamin-wrap .vitamin.vitamin-13 {
+				width: 81px;
+				margin-right: 0;
+			}
 
 /**********************VITAMIN - MAIN END*****************************/
 
@@ -1018,9 +1177,230 @@ img {
 
 
 
+/************************VITAMIN - TEMPLATE ********************************/
+
+.content-wrap .content.vitamin-template {
+		height: 85%;
+		position: relative;
+		overflow: hidden;
+		overflow-y:scroll;
+	}
+
+.content-wrap .content.vitamin-template .big-vitamin {
+	height: 50%;
+	position: absolute;
+	top: 32.3%;
+	left: 15.6%;
+}
+
+.content-wrap .content.vitamin-template .text {
+	width: 32.2%;
+	position: absolute;
+	top: 26%;
+	right: 11.2%;
+}
+
+	.content-wrap .content.vitamin-template .text .title {
+		font-family: "Scada", sans-serif;
+		color: #ed2324;
+		font-size: 31px;
+		margin-bottom: 10px;
+		margin-left: -10px;
+	}
+
+	.content-wrap .content.vitamin-template .text .description {
+		padding-left: 0px;
+		list-style: none;
+		margin:0;
+	}
+
+	.content-wrap .content.vitamin-template .text .show {
+		font-family: "Scada", sans-serif;
+		color: #ed2324;
+		font-size: 24px;
+		margin-left: -10px;
+		cursor: pointer;
+	}
+
+	.content-wrap .content.vitamin-template .text .hidden {
+		font-family: "Scada", sans-serif;
+		color: #231f20;
+		font-size: 20px;
+		display: none;
+		margin-bottom: 10px;
+	}
+
+	.content-wrap .content.vitamin-template .text .hidden.active {
+		display: block;
+	}
+
+		.content-wrap .content.vitamin-template .text .hidden span {
+			color: #ed2324;
+			margin-left: -15px;
+		}
+
+		.content-wrap .content.vitamin-template .text .hidden table {
+			margin-left: 2px;
+		}
+
+			.content-wrap .content.vitamin-template .text .hidden table td {
+				padding: 5px;
+				border: 1px solid #ed2324;
+				 
+			}
+
+.content-wrap .content.vitamin-template .vitamin-wrap {
+			width: 86.3%;
+			height: 11.5%;
+			margin: 0 auto;
+		}
+
+			.content-wrap .content.vitamin-template .vitamin-wrap .vitamin {
+				display: block;
+				height: 100%;
+				width: 77px;
+				position: relative;
+				float: left;
+				margin-right: 35px; 
+				margin-top: 60px;
+			}
+
+				
+
+					.content-wrap .content.vitamin-template .vitamin-wrap .vitamin .left {
+						
+			    		width: 50%;
+			    		height: 100%;
+			    		position: absolute;
+			    		top: 0;
+			    		left: 0;
+
+			    		-webkit-transform-style: preserve-3d;
+			    		transform-style: preserve-3d;
+			    		
+			    		image-rendering: -moz-crisp-edges;
+					}
 
 
+						.content-wrap .content.vitamin-template .vitamin-wrap .vitamin .left img {
+							height: 100%;
+							position: relative;
+							top: 0px;
 
+							backface-visibility: hidden;
+							-moz-backface-visibility: hidden;
+							-webkit-backface-visibility: hidden;
+
+							-webkit-transform-origin: right center;
+							transform-origin: right center;
+
+							-webkit-transition: all 1.5s ease;
+							-moz-transition: all 1.5s ease;
+							-ms-transition: all 1.5s ease;
+							-o-transition: all 1.5s ease;
+							transition: all 1.5s ease;
+
+							-webkit-transform:rotateY(0deg) perspective(900px);
+							transform:rotateY(0deg) perspective(900px);
+						}
+
+							.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.active .left img {
+								-webkit-transform:rotateY(80deg) perspective(900px);
+								transform:rotateY(80deg) perspective(900px);
+							}
+
+
+					.content-wrap .content.vitamin-template .vitamin-wrap .vitamin .right {
+						
+			    		width: 50%;
+			    		height: 100%;
+			    		position: absolute;
+			    		top: 0;
+			    		left: 50%;
+
+			    		-webkit-transform-style: preserve-3d;
+			    		transform-style: preserve-3d;
+
+			    		image-rendering: -moz-crisp-edges;
+					}
+
+						.content-wrap .content.vitamin-template .vitamin-wrap .vitamin .right img {
+							height: 100%;
+							position: relative;
+
+							backface-visibility: hidden;
+							-moz-backface-visibility: hidden;
+							-webkit-backface-visibility: hidden;
+
+							-webkit-transform-origin: left center;
+							transform-origin: left center;
+
+							-webkit-transition: all 1.5s ease;
+							-moz-transition: all 1.5s ease;
+							-ms-transition: all 1.5s ease;
+							-o-transition: all 1.5s ease;
+							transition: all 1.5s ease;
+
+							-webkit-transform:rotateY(0deg) perspective(900px);
+							transform:rotateY(0deg) perspective(900px);
+						}
+
+							.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.active .right img {
+								-webkit-transform:rotateY(-80deg) perspective(900px);
+								transform:rotateY(-80deg) perspective(900px);
+							}
+
+
+			.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.vitamin-2 {
+				width: 65px;
+			}
+
+			.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.vitamin-3 {
+				width: 100px;
+			}
+
+			.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.vitamin-4 {
+				width: 42px;
+			}
+
+			.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.vitamin-5 {
+				width: 52px;
+			}
+
+			.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.vitamin-6 {
+				width: 88px;
+			}
+
+			.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.vitamin-7 {
+				width: 74px;
+			}
+
+			.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.vitamin-8 {
+				width: 74px;
+			}
+
+			.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.vitamin-9 {
+				width: 66px;
+			}
+
+			.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.vitamin-10 {
+				width: 104px;
+			}
+
+			.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.vitamin-11 {
+				width: 88px;
+			}
+
+			.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.vitamin-12 {
+				width: 40px;
+			}
+
+			.content-wrap .content.vitamin-template .vitamin-wrap .vitamin.vitamin-13 {
+				width: 52px;
+				margin-right: 0;
+			}
+
+/*******************VITAMIN - TEMPLATE END*************************/
 
 
 
