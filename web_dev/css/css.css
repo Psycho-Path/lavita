@@ -1169,21 +1169,27 @@ img {
 /************************VITAMIN - TEMPLATE ********************************/
 
 .content-wrap .content.vitamin-template {
-    height: 85%;
-    position: relative;
-    overflow: hidden;
-    overflow-y:scroll;
-}
+		height: 85%;
+		position: relative;
+		overflow: hidden;
+		overflow-y:scroll;
+	}
 
 .content-wrap .content.vitamin-template .big-vitamin {
-    height: 50%;
-    position: absolute;
-    top: 32.3%;
-    left: 15.6%;
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	top: 32.3%;
+	left: 0;
 }
 
+	.content-wrap .content.vitamin-template .big-vitamin img {
+		height: 100%;
+		margin: 0 auto;
+	}
+
 .content-wrap .content.vitamin-template .text {
-    width: 32.2%;
+    width: 35.2%;
     position: absolute;
     top: 26%;
     right: 11.2%;
