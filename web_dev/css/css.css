@@ -1424,6 +1424,7 @@ img {
 		font-size: 28px;
 		font-weight: bold;
 		margin: 25px 0;
+		text-transform: uppercase;
 	}
 
 	.simple-wrap p {
