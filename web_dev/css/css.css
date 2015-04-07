@@ -142,6 +142,11 @@ img {
 					padding-right: 10px;
 				}
 
+					.content-wrap .head-wrap .menu li:hover a,
+					.content-wrap .head-wrap .menu li.active a {
+						color: #ed1f24;
+					}
+
 					.content-wrap .head-wrap .menu li:nth-of-type(3) a {
 						max-width: 140px;
 					}
@@ -151,24 +156,40 @@ img {
 					background-repeat: no-repeat;
 					background-position: 15px;
 				}
+					.content-wrap .head-wrap .menu li.btn-1:hover,
+					.content-wrap .head-wrap .menu li.btn-1.active {
+						background-image: url('/images/icon-btn-1-active.png');
+					}
 
 				.content-wrap .head-wrap .menu li.btn-2 {
 					background-image: url('/images/icon-btn-2.svg');
 					background-repeat: no-repeat;
 					background-position: 15px;
 				}
+					.content-wrap .head-wrap .menu li.btn-2:hover,
+					.content-wrap .head-wrap .menu li.btn-2.active {
+						background-image: url('/images/icon-btn-2-active.png');
+					}
 
 				.content-wrap .head-wrap .menu li.btn-3 {
 					background-image: url('/images/icon-btn-3.svg');
 					background-repeat: no-repeat;
 					background-position: 10px;
 				}
+					.content-wrap .head-wrap .menu li.btn-3:hover,
+					.content-wrap .head-wrap .menu li.btn-3.active {
+						background-image: url('/images/icon-btn-3-active.png');
+					}
 
 				.content-wrap .head-wrap .menu li.btn-4 {
 					background-image: url('/images/icon-btn-4.svg');
 					background-repeat: no-repeat;
 					background-position: 15px;
 				}
+					.content-wrap .head-wrap .menu li.btn-4:hover,
+					.content-wrap .head-wrap .menu li.btn-4.active {
+						background-image: url('/images/icon-btn-4-active.png');
+					}
 
 				.content-wrap .head-wrap .menu li {
 					background-size: auto 40px;
@@ -1105,6 +1126,14 @@ img {
 .content-wrap .content.vitamin-main .vitamin-wrap .vitamin.active .right img {
     -webkit-transform:rotateY(-80deg) perspective(900px);
     transform:rotateY(-80deg) perspective(900px);
+}
+
+
+.content-wrap .content.vitamin-main .vitamin-wrap .vitamin .right img.shadow-vit {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	z-index: 2;
 }
 
 
