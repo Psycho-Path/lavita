@@ -1,4 +1,4 @@
-body,html,h1,p {
+body,html,h1,h2,p {
 	padding:0;
 	margin: 0;
 }
@@ -569,6 +569,7 @@ img {
 			font-size: 17px;
 			margin: 20px 0;
 			font-family: 'Istok Web', sans-serif;
+			line-height: 20px;
 		}
 
 			.content-wrap .content.women-health-template p span {
@@ -1168,21 +1169,27 @@ img {
 /************************VITAMIN - TEMPLATE ********************************/
 
 .content-wrap .content.vitamin-template {
-    height: 85%;
-    position: relative;
-    overflow: hidden;
-    overflow-y:scroll;
-}
+		height: 85%;
+		position: relative;
+		overflow: hidden;
+		overflow-y:scroll;
+	}
 
 .content-wrap .content.vitamin-template .big-vitamin {
-    height: 50%;
-    position: absolute;
-    top: 32.3%;
-    left: 15.6%;
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	top: 32.3%;
+	left: 0;
 }
 
+	.content-wrap .content.vitamin-template .big-vitamin img {
+		height: 100%;
+		margin: 0 auto;
+	}
+
 .content-wrap .content.vitamin-template .text {
-    width: 32.2%;
+    width: 35.2%;
     position: absolute;
     top: 26%;
     right: 11.2%;
@@ -1396,7 +1403,44 @@ img {
 
 
 
+/*********VITAMIN - SIMPLE*******/
 
+.simple-wrap {
+	height: 73%;
+	width: 78.5%;
+	margin:0 auto;
+	position: relative;
+	padding-top: 7%;
+}
+
+	.simple-wrap:before {
+		content: 'почему может не хватать этих витаминов?';
+		font-family: 'Scada', sans-serif;
+		color: #ed1c24;
+		font-size: 55px;
+		position: absolute;
+		top: 42px;
+		left: -72px;
+		text-transform: uppercase;
+	}
+
+	.simple-wrap h2 {
+		font-family: 'Scada', sans-serif;
+		color: #000000;
+		font-size: 28px;
+		font-weight: bold;
+		margin: 25px 0;
+		text-transform: uppercase;
+	}
+
+	.simple-wrap p {
+		font-family: 'Istok Web', sans-serif;
+		color: #000000;
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+
+/******VITAMIN - SIMPLE - END****/
 
 
 
