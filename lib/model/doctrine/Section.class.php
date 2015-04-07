@@ -72,4 +72,22 @@ class Section extends BaseSection
         if(count($concreteSection)>0)
             $concreteSection->delete();
     }
+
+    /*
+     * Foreground content source
+     * This method gets foreground content html source
+     *
+     * @return Section
+    */
+    public static function getForegroundContentSource(Section $section)
+    {
+        $foregraundSection = SectionTable::getInstance()
+            ->createQuery("fs")
+            ->select("fs.*")
+            ->where("fs.parent_id = ?", $section->getId())
+            ->andWhere("fs.priority = ?", true)
+            ->fetchOne(array(), Doctrine_Core::HYDRATE_RECORD);
+
+        return $foregraundSection->getContent();
+    }
 }

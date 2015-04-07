@@ -36,7 +36,9 @@ class mainActions extends sfActions
       $this->content = $sectionContent;
       $this->html = $sectionContent->getHtml();
   }
-
+    /**
+    This method executes the section
+     */
     public function executeSection(sfWebRequest $request)
     {
         $slug = $request->getParameter("slug");
@@ -59,12 +61,12 @@ class mainActions extends sfActions
         {
             //It means that this is childless section e.g. Medicine article or News Article
             $content = $this->getThirdLevelSectionContentBySlugs($thirdLevelSlug);
+            if(!$content)
+                $content = Section::getForegroundContentSource(SectionTable::getInstance()->findOneBy("slug", $thirdLevelSlug));
+
             $this->html = $content->getHtml();
             $this->slug = $thirdLevelSlug;
-            if($content->getSection()->getType() == "WithHTMLContent")
-            {
-                $this->uniqueContent = false;
-            }
+            $this->uniqueContent = $this->determineUniqueStatus($content->getSection());
         }
         else
         {
@@ -73,23 +75,23 @@ class mainActions extends sfActions
             {
                 //It means that we're in second level section
                 $content = $this->getSecondLevelSectionContentBySlugs($subSlug);
+                if(!$content)
+                    $content = Section::getForegroundContentSource(SectionTable::getInstance()->findOneBy("slug", $subSlug));
+
                 $this->html = $content->getHtml();
-                $this->slug = $subSlug;
-                if($content->getSection()->getType() == "WithHTMLContent")
-                {
-                    $this->uniqueContent = false;
-                }
+                $this->slug = $thirdLevelSlug;
+                $this->uniqueContent = $this->determineUniqueStatus($content->getSection());
             }
             else if($slug)
             {
                 //That means that we're in one of first-level sections
                 $content = $this->getFirstLevelSectionContentBySlug($slug);
+                if(!$content)
+                    $content = Section::getForegroundContentSource(SectionTable::getInstance()->findOneBy("slug", $slug));
+
                 $this->html = $content->getHtml();
-                $this->slug = $slug;
-                if($content->getSection()->getType() == "WithHTMLContent")
-                {
-                    $this->uniqueContent = false;
-                }
+                $this->slug = $thirdLevelSlug;
+                $this->uniqueContent = $this->determineUniqueStatus($content->getSection());
             }
             else
             {
@@ -158,9 +160,30 @@ class mainActions extends sfActions
         }
     }
 
-
+    /**
+     * This method determines does section contains unique type or not
+     *
+     * @return bool
+     */
     private function determineUniqueStatus(Section $object)
     {
-        if()
+        if($object->getType() == "WithHTMLContent")
+            return false;
+        else
+            return true;
     }
+
+    /**
+     * This method determines does section contains content or not
+     *
+     * @return bool
+     */
+    private function determineContentInclusion(Section $object)
+    {
+        if($object->getType() == "WithoutContent")
+            return false;
+        else
+            return true;
+    }
+
 }
