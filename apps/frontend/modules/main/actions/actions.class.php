@@ -53,6 +53,7 @@ class mainActions extends sfActions
 
         $content = null;
         $this->slug = $slug;
+        $this->uniqueContent = true;
 
         if($thirdLevelSlug)
         {
@@ -60,6 +61,10 @@ class mainActions extends sfActions
             $content = $this->getThirdLevelSectionContentBySlugs($thirdLevelSlug);
             $this->html = $content->getHtml();
             $this->slug = $thirdLevelSlug;
+            if($content->getSection()->getType() == "WithHTMLContent")
+            {
+                $this->uniqueContent = false;
+            }
         }
         else
         {
@@ -70,6 +75,10 @@ class mainActions extends sfActions
                 $content = $this->getSecondLevelSectionContentBySlugs($subSlug);
                 $this->html = $content->getHtml();
                 $this->slug = $subSlug;
+                if($content->getSection()->getType() == "WithHTMLContent")
+                {
+                    $this->uniqueContent = false;
+                }
             }
             else if($slug)
             {
@@ -77,6 +86,10 @@ class mainActions extends sfActions
                 $content = $this->getFirstLevelSectionContentBySlug($slug);
                 $this->html = $content->getHtml();
                 $this->slug = $slug;
+                if($content->getSection()->getType() == "WithHTMLContent")
+                {
+                    $this->uniqueContent = false;
+                }
             }
             else
             {
@@ -143,5 +156,11 @@ class mainActions extends sfActions
         else{
             return null;
         }
+    }
+
+
+    private function determineUniqueStatus(Section $object)
+    {
+        if()
     }
 }

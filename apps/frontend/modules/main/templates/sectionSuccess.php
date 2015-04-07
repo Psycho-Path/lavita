@@ -14,7 +14,13 @@
             <img class="hearts1" src="/images/hearts1.png">
             <img class="hearts2" src="/images/hearts2.png">
         </div>
+        <?php if($uniqueContent):?>
         <?php echo $sf_data->getRaw('html');?>
+        <?php else:?>
+            <div class="simple-wrap">
+                <?php echo $sf_data->getRaw('html');?>
+            </div>
+        <?php endif;?>
     </div>
     <img class="warning" src="/images/warning.png">
 </div>
