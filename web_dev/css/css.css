@@ -1504,8 +1504,7 @@ img {
 	padding-top: 7%;
 }
 
-	.simple-wrap:before {
-		content: 'почему может не хватать этих витаминов?';
+	.simple-wrap h1 {
 		font-family: 'Scada', sans-serif;
 		color: #ed1c24;
 		font-size: 55px;
