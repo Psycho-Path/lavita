@@ -49,7 +49,13 @@ class mainActions extends sfActions
      */
     public function executeSection(sfWebRequest $request)
     {
-        //variables
+        if($request->getParameter('feedback_name') &&
+            $request->getParameter('feedback_email')) {
+            $this->errors = $this->validateForm($request);
+        }
+
+
+            //variables
         $slug = $request->getParameter("slug");
         $subSlug = $request->getParameter("sub_slug");
         $thirdLevelSlug = $request->getParameter("sub_sub_slug");
@@ -202,5 +208,83 @@ class mainActions extends sfActions
             return self::kSectionError;
     }
 
+
+    /**
+     *  Method validates form values and returns errors or null
+     */
+    function validateForm(sfWebRequest $request)
+    {
+        $name = $request->getParameter('feedback_name');
+        $visitor_email = $request->getParameter('feedback_email');
+        $user_message = $request->getParameter('feedback_message');
+
+        $errors = null;
+
+        ///------------Do Validations-------------
+        if(empty($name)||empty($visitor_email))
+        {
+            $errors .= "\n Name and Email are required fields. ";
+        }
+        if($this->IsInjected($visitor_email))
+        {
+            $errors .= "\n Bad email value!";
+        }
+        if(empty($_SESSION['6_letters_code'] ) ||
+            strcasecmp($_SESSION['6_letters_code'], $request->getParameter('6_letters_code')) != 0)
+        {
+            //Note: the captcha code is compared case insensitively.
+            //if you want case sensitive match, update the check above to
+            // strcmp()
+            $errors .= "\n The captcha code does not match!";
+        }
+
+        if(empty($errors))
+        {
+            //send the email
+            $to = "truedupree@gmail.com";
+            $subject="Нам оставили отзыв!";
+            $from = $visitor_email;
+            $ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '';
+
+            $body = "Пользователь, $name Оставил отзыв:\n".
+                "Имя: $name\n".
+                "Email: $visitor_email \n".
+                "Отзыв: \n ".
+                "$user_message\n".
+                "IP: $ip\n";
+
+            $headers = "From: $from \r\n";
+            $headers .= "Reply-To: $visitor_email \r\n";
+
+            mail($to, $subject, $body,$headers);
+
+//            header('Location: thank-you.html');
+            return null;
+        }
+        else
+            return $errors;
+    }
+
+    function IsInjected($str)
+    {
+        $injections = array('(\n+)',
+            '(\r+)',
+            '(\t+)',
+            '(%0A+)',
+            '(%0D+)',
+            '(%08+)',
+            '(%09+)'
+        );
+        $inject = join('|', $injections);
+        $inject = "/$inject/i";
+        if(preg_match($inject,$str))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
 }

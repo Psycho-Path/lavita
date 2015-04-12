@@ -1,8 +1,15 @@
 <?php use_stylesheet("jquery.mCustomScrollbar.css");?>
 <?php use_javascript("jquery.mCustomScrollbar.js");?>
+<?php use_javascript("gen_validatorv31.js");?>
 <?php use_javascript("scrollbar.init.js");?>
 
 <div class="wrap">
+    <?php
+    if(!empty($errors)){
+        echo "<p class='err'>".nl2br($errors)."</p>";
+    }
+    ?>
+    <div id='contact_form_errorloc' class='err'></div>
     <?php include_component("main", "feedbackForm"); ?>
     <div class="content-wrap">
         <div class="head-wrap">

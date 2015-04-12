@@ -15,7 +15,9 @@
 * http://www.gnu.org/licenses/gpl.html
 */
 
+session_name('symfony');
 session_start();
+
 //Settings: You can customize the captcha here
 $image_width = 120;
 $image_height = 40;
@@ -76,12 +78,16 @@ $x = ($image_width - $textbox[4])/2;
 $y = ($image_height - $textbox[5])/2;
 imagettftext($image, $font_size, 0, $x, $y, $text_color, $font , $code);
 
+$_SESSION['6_letters_code'] = $code;
+
 
 /* Show captcha image in the page html page */
 header('Content-Type: image/jpeg');// defining the image type to be shown in browser widow
 imagejpeg($image);//showing the image
 imagedestroy($image);//destroying the image instance
-$_SESSION['6_letters_code'] = $code;
+
+//$_SESSION['6_letters_code'] = $code;
+
 
 function hexrgb ($hexstr)
 {
