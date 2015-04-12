@@ -27,6 +27,9 @@ Section:
     priority:
       type: boolean
       default: 0
+    image:
+      type: string(255)
+
   relations:
     Content:
       local: id

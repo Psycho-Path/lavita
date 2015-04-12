@@ -11,6 +11,7 @@
  * @property integer $parent_id
  * @property enum $type
  * @property boolean $priority
+ * @property string $image
  * @property Content $Content
  * 
  * @method integer getId()        Returns the current record's "id" value
@@ -19,6 +20,7 @@
  * @method integer getParentId()  Returns the current record's "parent_id" value
  * @method enum    getType()      Returns the current record's "type" value
  * @method boolean getPriority()  Returns the current record's "priority" value
+ * @method string  getImage()     Returns the current record's "image" value
  * @method Content getContent()   Returns the current record's "Content" value
  * @method Section setId()        Sets the current record's "id" value
  * @method Section setName()      Sets the current record's "name" value
@@ -26,6 +28,7 @@
  * @method Section setParentId()  Sets the current record's "parent_id" value
  * @method Section setType()      Sets the current record's "type" value
  * @method Section setPriority()  Sets the current record's "priority" value
+ * @method Section setImage()     Sets the current record's "image" value
  * @method Section setContent()   Sets the current record's "Content" value
  * 
  * @package    Lavita
@@ -71,6 +74,10 @@ abstract class BaseSection extends sfDoctrineRecord
         $this->hasColumn('priority', 'boolean', null, array(
              'type' => 'boolean',
              'default' => 0,
+             ));
+        $this->hasColumn('image', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
              ));
     }
 

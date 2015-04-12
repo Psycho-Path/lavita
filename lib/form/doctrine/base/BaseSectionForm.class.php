@@ -21,6 +21,7 @@ abstract class BaseSectionForm extends BaseFormDoctrine
       'parent_id'  => new sfWidgetFormInputText(),
       'type'       => new sfWidgetFormChoice(array('choices' => array('WithoutContent' => 'WithoutContent', 'WithUniqueContent' => 'WithUniqueContent', 'WithHTMLContent' => 'WithHTMLContent', 'WithListContent' => 'WithListContent'))),
       'priority'   => new sfWidgetFormInputCheckbox(),
+      'image'      => new sfWidgetFormInputText(),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
     ));
@@ -32,6 +33,7 @@ abstract class BaseSectionForm extends BaseFormDoctrine
       'parent_id'  => new sfValidatorInteger(array('required' => false)),
       'type'       => new sfValidatorChoice(array('choices' => array(0 => 'WithoutContent', 1 => 'WithUniqueContent', 2 => 'WithHTMLContent', 3 => 'WithListContent'), 'required' => false)),
       'priority'   => new sfValidatorBoolean(array('required' => false)),
+      'image'      => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
     ));

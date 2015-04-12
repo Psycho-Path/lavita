@@ -10,14 +10,6 @@
  */
 class mainActions extends sfActions
 {
-
-    const kSectionError = -1;
-    const kEmptySection = 0;
-    const kTypicalSection = 1;
-    const kUniqueSection = 2;
-    const kListSectionWithoutImages = 3;
-    const kListSectionWithImages = 4;
-
  /**
   * Executes index action
   *
@@ -49,77 +41,65 @@ class mainActions extends sfActions
      */
     public function executeSection(sfWebRequest $request)
     {
-        //variables
         $slug = $request->getParameter("slug");
         $subSlug = $request->getParameter("sub_slug");
         $thirdLevelSlug = $request->getParameter("sub_sub_slug");
-        $rootSection = SectionTable::getInstance()->findOneBy("parent_id", 0);
-        $content = null;
-        $this->slug = $slug;
-        $this->uniqueContent = true;
 
-        //move it to components
+        $rootSection = SectionTable::getInstance()->findOneBy("parent_id", 0);
+
         $this->firstLevelSections = SectionTable::getInstance()
             ->createQuery('fls')
             ->select('fls.*')
             ->where('fls.parent_id = ?', $rootSection->getId())
             ->execute();
 
-        if($thirdLevelSlug) {
+        $content = null;
+        $this->slug = $slug;
+        $this->uniqueContent = true;
+
+        if($thirdLevelSlug)
+        {
+            //It means that this is childless section e.g. Medicine article or News Article
             $content = $this->getThirdLevelSectionContentBySlugs($thirdLevelSlug);
-            $this->slug = $thirdLevelSlug;
             if(!$content)
                 $content = Section::getForegroundContentSource(SectionTable::getInstance()->findOneBy("slug", $thirdLevelSlug));
+
+            $this->html = $content->getHtml();
+            $this->slug = $thirdLevelSlug;
+            $this->uniqueContent = $this->determineUniqueStatus($content->getSection());
         }
         else
         {
-            if($subSlug) {
+            //Here we should check for subSlug to determine the level of this section
+            if($subSlug)
+            {
+                //It means that we're in second level section
                 $content = $this->getSecondLevelSectionContentBySlugs($subSlug);
-                $this->slug = $subSlug;
                 if(!$content)
                     $content = Section::getForegroundContentSource(SectionTable::getInstance()->findOneBy("slug", $subSlug));
+
+                $this->html = $content->getHtml();
+                $this->slug = $thirdLevelSlug;
+                $this->uniqueContent = $this->determineUniqueStatus($content->getSection());
             }
-            else if($slug) {
+            else if($slug)
+            {
+                //That means that we're in one of first-level sections
                 $content = $this->getFirstLevelSectionContentBySlug($slug);
-                $this->slug = $slug;
                 if(!$content)
                     $content = Section::getForegroundContentSource(SectionTable::getInstance()->findOneBy("slug", $slug));
+
+                $this->html = $content->getHtml();
+                $this->slug = $thirdLevelSlug;
+                $this->uniqueContent = $this->determineUniqueStatus($content->getSection());
             }
-            else {
+            else
+            {
+                //if there is no slugs in this url, probably it is the homepage or some mistake
+                //anyway we should force user to the homepage
+
                 $this->redirect('main/index');
             }
-
-            $this->html = $content->getHtml();
-            $this->currentSection = $content->getSection();
-            $this->firstLevelSection = Section::getFirstLevelSectionForSection($content->getSection());
-            $this->firstLevelSubsections = Section::getSubsections($this->firstLevelSection);
-
-            switch($this->determineSectionStatus($content->getSection())){
-                case(self::kEmptySection):
-                    //can not be true
-                    var_dump($content->getSection()->getId());
-                    break;
-                case(self::kUniqueSection):
-                    $this->uniqueContent = true;
-                    $this->setTemplate('unique');
-                    break;
-                case(self::kTypicalSection):
-                    $this->setTemplate('typical');
-                    $this->headerTitle = SectionTable::getInstance()->findOneBy("id", $content->getSection()->getParentId());
-                    break;
-                case(self::kListSectionWithoutImages):
-                    $this->setTemplate('list');
-                    $this->subSections = Section::getSubsections($content->getSection());
-                    break;
-                case(self::kListSectionWithImages):
-                    $this->setTemplate('articlesList');
-                    $this->subSections = Section::getSubsections($content->getSection());
-                    $this->fileBasePath = ImageValidator::getBaseArticleSRC();
-                    break;
-                default:
-                    break;
-            }
-
         }
     }
 
@@ -183,24 +163,27 @@ class mainActions extends sfActions
     /**
      * This method determines does section contains unique type or not
      *
-     * @return int
+     * @return bool
      */
-    private function determineSectionStatus(Section $object)
+    private function determineUniqueStatus(Section $object)
     {
-        if($object->getType() == "WithoutContent")
-            return self::kEmptySection;
-        elseif($object->getType() == "WithHTMLContent")
-            return self::kTypicalSection;
-        elseif($object->getType() == "WithUniqueContent")
-            return self::kUniqueSection;
-        elseif($object->getType() == "WithListContent")
-            if(strpos($object->getSlug(), "article") || strpos($object->getSlug(), "news"))
-                return self::kListSectionWithImages;
-            else
-                return self::kListSectionWithoutImages;
+        if($object->getType() == "WithHTMLContent")
+            return false;
         else
-            return self::kSectionError;
+            return true;
     }
 
+    /**
+     * This method determines does section contains content or not
+     *
+     * @return bool
+     */
+    private function determineContentInclusion(Section $object)
+    {
+        if($object->getType() == "WithoutContent")
+            return false;
+        else
+            return true;
+    }
 
 }

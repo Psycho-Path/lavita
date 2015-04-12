@@ -52,6 +52,19 @@
             <td class="sections-form-description">Приоритет:&nbsp</td>
             <td><input type="checkbox" name="priority" <?php if($newForm): echo ""; else: if($section->getPriority())echo "checked"; endif; ?>></td>
         </tr>
+
+        <?php if($parent->getType() == "WithListContent"):?>
+        <tr>
+            <td class="sections-form-description">Превью:&nbsp</td>
+            <td>
+                <?php if(!$newForm && $section->getImage()):?>
+                <img class="article-image" src="<?php echo $fileBasePath. $section->getImage();?>" /><br />
+                <?php endif;?>
+                <input type="file" name="image">
+            </td>
+        </tr>
+        <?php endif;?>
+        </form>
     </table>
     <input type="submit" value="Сохранить">
 </form>

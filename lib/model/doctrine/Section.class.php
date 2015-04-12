@@ -18,8 +18,9 @@ class Section extends BaseSection
     const kParentIdKey = "parent_id";
     const kTypeKey = "type";
     const kPriorityKey = "priority";
+    const kImageKey = "image";
 
-    /*
+    /**
      * Create Section
      * This method creates new section according to incoming params
     */
@@ -32,12 +33,27 @@ class Section extends BaseSection
         $sectionObject->setParentId($params[self::kParentIdKey]);
         $sectionObject->setType($params[self::kTypeKey]);
         $sectionObject->setPriority($params[self::kPriorityKey]=="on" ? 1 : 0);
+        $sectionObject->setImage($params[self::kImageKey]);
         $sectionObject->setCreatedAt(date("Y-m-d H:m:s"));
         $sectionObject->setUpdatedAt(date("Y-m-d H:m:s"));
         $sectionObject->save();
+
+        if($sectionObject->getType() == "WithListContent")
+        {
+            $emptyContent = new Content();
+
+            $emptyContent->setHtml("<div>empty</div>");
+            $emptyContent->setSectionId($sectionObject->getId());
+            $emptyContent->setVisibility(true);
+            $sectionObject->setCreatedAt(date("Y-m-d H:m:s"));
+            $sectionObject->setUpdatedAt(date("Y-m-d H:m:s"));
+            $emptyContent->setSection($sectionObject);
+
+            $emptyContent->save();
+        }
     }
 
-    /*
+    /**
      * Update Section
      * This method updates concrete section according to incoming params
     */
@@ -56,12 +72,27 @@ class Section extends BaseSection
         $concreteSection->setParentId($params[self::kParentIdKey]);
         $concreteSection->setType($params[self::kTypeKey]);
         $concreteSection->setPriority($params[self::kPriorityKey]=="on" ? 1 : 0);
+        $concreteSection->setImage($params[self::kImageKey]);
         $concreteSection->setCreatedAt($concreteSection->getCreatedAt());
         $concreteSection->setUpdatedAt(date("Y-m-d H:m:s"));
         $concreteSection->save();
+
+        if($concreteSection->getType() == "WithListContent")
+        {
+            $emptyContent = new Content();
+
+            $emptyContent->setHtml("<div>empty</div>");
+            $emptyContent->setSectionId($concreteSection->getId());
+            $emptyContent->setVisibility(true);
+            $emptyContent->setCreatedAt(date("Y-m-d H:m:s"));
+            $emptyContent->setUpdatedAt(date("Y-m-d H:m:s"));
+            $emptyContent->setSection($concreteSection);
+
+            $emptyContent->save();
+        }
     }
 
-    /*
+    /**
      * Delete Section
      * This method deletes concrete section according to incoming identifier
     */
@@ -73,7 +104,7 @@ class Section extends BaseSection
             $concreteSection->delete();
     }
 
-    /*
+    /**
      * Foreground content source
      * This method gets foreground content html source
      *
@@ -89,5 +120,52 @@ class Section extends BaseSection
             ->fetchOne(array(), Doctrine_Core::HYDRATE_RECORD);
 
         return $foregraundSection->getContent();
+    }
+
+    /**
+     * Subsections getter
+     * This method gets current section subsections
+     *
+     * @return Section
+    */
+    public static function getSubsections(Section $section)
+    {
+        return SectionTable::getInstance()
+            ->createQuery("ss")
+            ->select("ss.*")
+            ->where("ss.parent_id = ?", $section->getId())
+            ->execute();
+    }
+
+    /**
+     * @return Section
+     */
+    public static function getFirstLevelSectionForSection(Section $section)
+    {
+        if($section->getParentId())
+        {
+            $flSection = self::oneLevelUpSection($section);
+            return $flSection;
+        }
+    }
+
+    /**
+    * @return Section
+    */
+    private static function oneLevelUpSection(Section $section)
+    {
+        $parentSection = SectionTable::getInstance()->findOneBy("id", $section->getParentId());
+        if($parentSection->getId() != self::getRootSection()->getId())
+            return self::oneLevelUpSection($parentSection);
+        else
+            return $section;
+    }
+
+    /**
+    * @return Section
+    */
+    private static function getRootSection()
+    {
+        return SectionTable::getInstance()->findOneBy("parent_id", 0);
     }
 }

@@ -65,7 +65,7 @@ a.left-button :hover
 {
     display: table-cell;
     vertical-align: middle;
-    color: #ffffff;
+    color: #333333;
     font-size: 42px;
 }
 
@@ -73,7 +73,7 @@ a.left-button :hover
 {
     display: table-cell;
     vertical-align: middle;
-    color: #ffffff;
+    color: #333333;
     font-size: 42px;
 }
 
@@ -105,7 +105,7 @@ table.section-screen-table
 {
     background-color: linen;
     width: 100%;
-    color: #ffffff;
+    color: #333333;
     border-collapse: collapse;
 
 }
@@ -113,7 +113,8 @@ table.section-screen-table
 table.section-screen-table th
 {
     height: 44px;
-    background-color: #73B65A;
+    background-image: url(/images/admin_background_pattern_120.jpg);
+    /*background-color: #73B65A;*/
     font-size: 21px;
 }
 
@@ -129,7 +130,8 @@ table.section-screen-table tbody tr
 table.section-screen-table tbody tr.even
 {
     height: 44px;
-    background-color: #e3fadc;
+    /*background-color: #e3fadc;*/
+    background-color: #FCE8ED;
 }
 
 table.section-screen-table tbody tr td
@@ -155,8 +157,9 @@ div.section-screen-navigation a div.section-screen-navigation-add-new
     display: table;
     width: 33%;
     height: 44px;
-    background-color: #73B65A;
-    color: #ffffff;
+    background-image: url(/images/admin_background_pattern_120.jpg);
+    /*background-color: #73B65A;*/
+    color: #333333;
     text-align: center;
     font-size: 21px;
     float: left;
@@ -181,7 +184,8 @@ div.section-screen-form-wrapper
 
 form.sections-form
 {
-    background-color: #73B65A;
+    background-image: url(/images/admin_background_pattern_120.jpg);
+    /*background-color: #73B65A;*/
     padding: 10px;
     margin: 0 auto 10px;
 }
@@ -195,14 +199,14 @@ form.sections-form table.sections-form-table tr td.sections-form-description
 {
     text-align: right;
     font-size: 21px;
-    color: #ffffff;
+    color: #333333;
 }
 
 form.sections-form table.sections-form-table tr td input[type="text"]
 {
     width: 230px;
     height: 30px;
-    background-color: #e3fadc;
+    background-color: #FCE8ED;
     color: #464646;
     font-size: 17px;
     border: 0;
@@ -213,8 +217,8 @@ form.sections-form table.sections-form-table tr td input[type="text"]
 form.sections-form table.sections-form-table tr td input[type="text"]:focus
 {
     outline: none;
-    border: solid 1px #3cb623;
-    box-shadow: 0 0 5px 1px #088120;
+    border: solid 1px #E8ACBB;
+    box-shadow: 0 0 5px 1px #96384F;
 }
 
 form.sections-form table.sections-form-table tr td input[type="checkbox"]
@@ -225,41 +229,42 @@ form.sections-form table.sections-form-table tr td input[type="checkbox"]
 form.sections-form table.sections-form-table tr td input[type="checkbox"]:focus
 {
     outline: none;
-    border: solid 1px #3cb623;
-    box-shadow: 0 0 5px 1px #088120;
+    border: solid 1px #E8ACBB;
+    box-shadow: 0 0 5px 1px #96384F;
 }
 
 form.sections-form table.sections-form-table tr td select
 {
     width: 230px;
     height: 30px;
-    background-color: #e3fadc;
+    background-color: #FCE8ED;
     color: #464646;
 }
 
 form.sections-form table.sections-form-table tr td select:focus
 {
     outline: none;
-    border: solid 1px #3cb623;
-    box-shadow: 0 0 5px 1px #088120;
+    border: solid 1px #E8ACBB;
+    box-shadow: 0 0 5px 1px #96384F;
 }
 
 form.sections-form input[type="submit"]
 {
     height: 44px;
     width: 40%;
-    background-color: #e3fadc;
+    background-color: #FCE8ED;
     border: 0;
     border-radius: 3px;
     margin: 20px 31.5% 10px;
     cursor: pointer;
+    box-shadow: 0 0 5px 1px #96384F;
 }
 
 form.sections-form input[type="submit"]:focus
 {
     outline: none;
-    border: solid 1px #3cb623;
-    box-shadow: 0 0 5px 1px #088120;
+    border: solid 1px #E8ACBB;
+    box-shadow: 0 0 5px 1px #96384F;
 }
 
 div.section-screen-navigation
@@ -288,8 +293,9 @@ div.section-screen-navigation a div.section-screen-navigation-back
     display: table;
     width: 33%;
     height: 44px;
+    /*background-image: url(/images/admin_background_pattern_120.jpg);*/
     background-color: #73B65A;
-    color: #ffffff;
+    color: #333333;
     text-align: center;
     font-size: 21px;
     float: left;
@@ -303,7 +309,7 @@ div.section-screen-navigation a div.section-screen-navigation-delete
     width: 33%;
     height: 44px;
     background-color: #E75C58;
-    color: #ffffff;
+    color: #333333;
     text-align: center;
     font-size: 21px;
     float: right;
@@ -315,6 +321,12 @@ div.section-screen-navigation a div span
 {
     display: table-cell;
     vertical-align: middle;
+}
+
+img.article-image
+{
+    width:120px;
+    height: auto;
 }
 
 /*** SECTIONS FORM ENDS ***/

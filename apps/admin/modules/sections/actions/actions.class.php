@@ -127,12 +127,20 @@ class sectionsActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
+      $imageName = null;
+      if(isset($_FILES["image"]))
+        $imageName = ImageValidator::validateFile($_FILES["image"]["name"], $_FILES["image"]["tmp_name"], ImageValidator::kArticleType);
+
+      if($imageName)
+          ImageValidator::uploadFile($_FILES["image"]["tmp_name"], $imageName);
+
       $requestParams = array(
           Section::kNameKey => $request->getParameter("name"),
           Section::kSlugKey => $request->getParameter("slug"),
           Section::kParentIdKey => $request->getParameter("parent_id"),
           Section::kTypeKey => $request->getParameter("type"),
-          Section::kPriorityKey => $request->getParameter("priority")
+          Section::kPriorityKey => $request->getParameter("priority"),
+          Section::kImageKey => $imageName
       );
 
       Section::createNewSectionWithParams($requestParams);
@@ -150,6 +158,13 @@ class sectionsActions extends sfActions
   public function executeUpdate(sfWebRequest $request)
   {
       $this->sectionId = $request->getParameter("id");
+      $imageName = SectionTable::getInstance()->findOneBy("id", $request->getParameter("id"))->getImage();
+
+      if(isset($_FILES["image"]) && $_FILES["image"]) {
+          $imageName = ImageValidator::validateFile($_FILES["image"]["name"], $_FILES["image"]["tmp_name"], ImageValidator::kArticleType);
+          if($imageName)
+              ImageValidator::uploadFile($_FILES["image"]["tmp_name"], $imageName);
+      }
 
       $requestParams = array(
           Section::kIdKey => $request->getParameter("id"),
@@ -157,7 +172,8 @@ class sectionsActions extends sfActions
           Section::kSlugKey => $request->getParameter("slug"),
           Section::kParentIdKey => $request->getParameter("parent_id"),
           Section::kTypeKey => $request->getParameter("type"),
-          Section::kPriorityKey => $request->getParameter("priority")
+          Section::kPriorityKey => $request->getParameter("priority"),
+          Section::kImageKey => $imageName
         );
 
       Section::updateSectionWithParams($requestParams);

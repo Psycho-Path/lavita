@@ -20,6 +20,7 @@ class SectionsComponents extends sfComponents{
             $potentialParentSections = SectionTable::getInstance()->findBy("parent_id", $obviousParent->getParentId());
         }
 
+        $this->fileBasePath = ImageValidator::getBaseArticleSRC();
         $this->section = $sectionObject;
         $this->parent = $obviousParent;
         $this->parentsList = $potentialParentSections;
