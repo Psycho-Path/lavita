@@ -30,6 +30,7 @@
         </div>
         <div class="scrolled" style="height: 730px; overflow: auto;">
             <div class="simple-wrap">
+                <h1><?php echo $currentSection->getName();?></h1>
                 <?php echo $sf_data->getRaw('html');?>
             </div>
         </div>

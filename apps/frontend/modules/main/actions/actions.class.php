@@ -72,10 +72,10 @@ class mainActions extends sfActions
             ->execute();
 
         if($thirdLevelSlug) {
-            $content = $this->getThirdLevelSectionContentBySlugs($thirdLevelSlug);
+            $content = $this->getThirdLevelSectionContentBySlugs($thirdLevelSlug, $subSlug);
             $this->slug = $thirdLevelSlug;
-            if(!$content)
-                $content = Section::getForegroundContentSource(SectionTable::getInstance()->findOneBy("slug", $thirdLevelSlug));
+//            if(!$content)
+//                $content = Section::getForegroundContentSource(SectionTable::getInstance()->findOneBy("slug", $thirdLevelSlug));
         }
         else
         {
@@ -94,38 +94,36 @@ class mainActions extends sfActions
             else {
                 $this->redirect('main/index');
             }
+        }
+        $this->html = $content->getHtml();
+        $this->currentSection = $content->getSection();
+        $this->firstLevelSection = Section::getFirstLevelSectionForSection($content->getSection());
+        $this->firstLevelSubsections = Section::getSubsections($this->firstLevelSection);
 
-            $this->html = $content->getHtml();
-            $this->currentSection = $content->getSection();
-            $this->firstLevelSection = Section::getFirstLevelSectionForSection($content->getSection());
-            $this->firstLevelSubsections = Section::getSubsections($this->firstLevelSection);
-
-            switch($this->determineSectionStatus($content->getSection())){
-                case(self::kEmptySection):
-                    //can not be true
-                    var_dump($content->getSection()->getId());
-                    break;
-                case(self::kUniqueSection):
-                    $this->uniqueContent = true;
-                    $this->setTemplate('unique');
-                    break;
-                case(self::kTypicalSection):
-                    $this->setTemplate('typical');
-                    $this->headerTitle = SectionTable::getInstance()->findOneBy("id", $content->getSection()->getParentId());
-                    break;
-                case(self::kListSectionWithoutImages):
-                    $this->setTemplate('list');
-                    $this->subSections = Section::getSubsections($content->getSection());
-                    break;
-                case(self::kListSectionWithImages):
-                    $this->setTemplate('articlesList');
-                    $this->subSections = Section::getSubsections($content->getSection());
-                    $this->fileBasePath = ImageValidator::getBaseArticleSRC();
-                    break;
-                default:
-                    break;
-            }
-
+        switch($this->determineSectionStatus($content->getSection())){
+            case(self::kEmptySection):
+                //can not be true
+                var_dump($content->getSection()->getId());
+                break;
+            case(self::kUniqueSection):
+                $this->uniqueContent = true;
+                $this->setTemplate('unique');
+                break;
+            case(self::kTypicalSection):
+                $this->setTemplate('typical');
+                $this->headerTitle = SectionTable::getInstance()->findOneBy("id", $content->getSection()->getParentId());
+                break;
+            case(self::kListSectionWithoutImages):
+                $this->setTemplate('list');
+                $this->subSections = Section::getSubsections($content->getSection());
+                break;
+            case(self::kListSectionWithImages):
+                $this->setTemplate('articlesList');
+                $this->subSections = Section::getSubsections($content->getSection());
+                $this->fileBasePath = ImageValidator::getBaseArticleSRC();
+                break;
+            default:
+                break;
         }
     }
 
@@ -171,15 +169,21 @@ class mainActions extends sfActions
      *
      * @return Content
      */
-    private function getThirdLevelSectionContentBySlugs($subSubSlug, $slug=null, $subSlug=null)
+    private function getThirdLevelSectionContentBySlugs($subSubSlug, $subSlug, $slug=null)
     {
         //We don't need $slug in this part, it have been added just to make code more flexible
         //Maybe client would ask you to make some bread crumbs, and you would like to return not just Content object,
         //but maybe an array with links to previous sections and content of current section
 
-        $section = SectionTable::getInstance()->findOneBy("slug", $subSubSlug);
+        $section = SectionTable::getInstance()
+                    ->createQuery('ts')
+                    ->select('ts.*')
+                    ->where('ts.slug LIKE ?', $subSubSlug)
+                    ->andWhere('ts.parent_id = ?', SectionTable::getInstance()->findOneBy("slug", $subSlug)->getId())
+                    ->fetchOne();
         if(count($section)>0) {
             return ContentTable::getInstance()->findOneBy("section_id", $section->getId());
+
         }
         else{
             return null;

@@ -34,8 +34,18 @@
       <file leaf-file-name="actions.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/frontend/modules/main/actions/actions.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22110553" vertical-offset="3363" max-vertical-offset="4440">
-              <caret line="233" column="9" selection-start-line="233" selection-start-column="9" selection-end-line="233" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.6482412" vertical-offset="2583" max-vertical-offset="4500">
+              <caret line="198" column="5" selection-start-line="198" selection-start-column="5" selection-end-line="198" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="typicalSuccess.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/frontend/modules/main/templates/typicalSuccess.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="660">
+              <caret line="32" column="46" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -67,6 +77,18 @@
             <state vertical-scroll-proportion="-2.5" vertical-offset="105" max-vertical-offset="900">
               <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sectionSuccess.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/frontend/modules/main/templates/sectionSuccess.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-23.625" vertical-offset="3" max-vertical-offset="660">
+              <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,7 +172,6 @@
         <option value="$PROJECT_DIR$/web_dev/js/vitamin.js" />
         <option value="$PROJECT_DIR$/web_dev/css/css.css" />
         <option value="$PROJECT_DIR$/web_dev/js/js.js" />
-        <option value="$PROJECT_DIR$/apps/frontend/modules/main/templates/sectionSuccess.php" />
         <option value="$PROJECT_DIR$/web_dev/js/scrollbar.init.js" />
         <option value="$PROJECT_DIR$/config/doctrine/schema.yml" />
         <option value="$PROJECT_DIR$/lib/migration/doctrine/1428776738_version6.php" />
@@ -162,12 +183,13 @@
         <option value="$PROJECT_DIR$/apps/admin/modules/sections/templates/_newform.php" />
         <option value="$PROJECT_DIR$/lib/model/doctrine/Section.class.php" />
         <option value="$PROJECT_DIR$/apps/frontend/modules/main/templates/articlesListSuccess.php" />
-        <option value="$PROJECT_DIR$/apps/frontend/modules/main/templates/typicalSuccess.php" />
         <option value="$PROJECT_DIR$/apps/frontend/modules/main/templates/uniqueSuccess.php" />
         <option value="$PROJECT_DIR$/apps/frontend/modules/main/actions/components.class.php" />
         <option value="$PROJECT_DIR$/apps/frontend/modules/main/templates/listSuccess.php" />
         <option value="$PROJECT_DIR$/apps/frontend/modules/main/templates/_feedbackForm.php" />
         <option value="$PROJECT_DIR$/lib/vendor/Captcha/captcha_code_file.php" />
+        <option value="$PROJECT_DIR$/apps/frontend/modules/main/templates/typicalSuccess.php" />
+        <option value="$PROJECT_DIR$/apps/frontend/modules/main/templates/sectionSuccess.php" />
         <option value="$PROJECT_DIR$/apps/frontend/modules/main/actions/actions.class.php" />
       </list>
     </option>
@@ -855,22 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/frontend/modules/main/templates/sectionSuccess.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6281407" vertical-offset="0" max-vertical-offset="597">
-          <caret line="25" column="10" selection-start-line="0" selection-start-column="4" selection-end-line="25" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/frontend/modules/main/templates/typicalSuccess.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4522613" vertical-offset="0" max-vertical-offset="645">
-          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/frontend/modules/main/templates/uniqueSuccess.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3517588" vertical-offset="0" max-vertical-offset="597">
@@ -969,10 +975,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/frontend/modules/main/templates/typicalSuccess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="660">
+          <caret line="32" column="46" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/frontend/modules/main/templates/sectionSuccess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.625" vertical-offset="3" max-vertical-offset="660">
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/frontend/modules/main/actions/actions.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22110553" vertical-offset="3363" max-vertical-offset="4440">
-          <caret line="233" column="9" selection-start-line="233" selection-start-column="9" selection-end-line="233" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.6482412" vertical-offset="2583" max-vertical-offset="4500">
+          <caret line="198" column="5" selection-start-line="198" selection-start-column="5" selection-end-line="198" selection-end-column="5" />
           <folding />
         </state>
       </provider>
