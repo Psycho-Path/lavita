@@ -181,37 +181,6 @@ img {
 						background-image: url('/images/icon-btn-3-active.png');
 					}
 
-					.content-wrap .head-wrap .menu li.btn-3.active {
-						border-bottom: 1px solid #ed1f24;
-					}
-
-						.content-wrap .head-wrap .menu li.btn-3 .submenu {
-							position: absolute;
-							right: 0;
-							top: 65px;
-							width: 670px;
-							text-align: right;
-						}
-							.content-wrap .head-wrap .menu li.btn-3 .submenu a {
-								padding: 0 10px;
-								padding-top: 2px;
-								display: inline-block;
-								max-width: 500px;
-								height: 23px;
-								color: #5e6263;
-								font-size: 20px;
-								border-right: 1px solid #ed1f24;
-							}
-
-								.content-wrap .head-wrap .menu li.btn-3 .submenu a:hover,
-								.content-wrap .head-wrap .menu li.btn-3 .submenu a.active {
-									color: #ed1f24;
-								}
-
-								.content-wrap .head-wrap .menu li.btn-3 .submenu a:last-of-type {
-									border-right: 0;
-								}
-
 				.content-wrap .head-wrap .menu li.btn-4 {
 					background-image: url('/images/icon-btn-4.svg');
 					background-repeat: no-repeat;
@@ -221,37 +190,6 @@ img {
 					.content-wrap .head-wrap .menu li.btn-4.active {
 						background-image: url('/images/icon-btn-4-active.png');
 					}
-
-					.content-wrap .head-wrap .menu li.btn-4.active {
-						border-bottom: 1px solid #ed1f24;
-					}
-
-						.content-wrap .head-wrap .menu li.btn-4 .submenu {
-							position: absolute;
-							right: 70px;
-							top: 65px;
-							width: 670px;
-							text-align: right;
-						}
-							.content-wrap .head-wrap .menu li.btn-4 .submenu a {
-								padding: 0 10px;
-								padding-top: 2px;
-								display: inline-block;
-								max-width: 500px;
-								height: 23px;
-								color: #5e6263;
-								font-size: 20px;
-								border-right: 1px solid #ed1f24;
-							}
-								.content-wrap .head-wrap .menu li.btn-4 .submenu a:hover,
-								.content-wrap .head-wrap .menu li.btn-4 .submenu a.active {
-									color: #ed1f24;
-								}
-
-								.content-wrap .head-wrap .menu li.btn-4 .submenu a:last-of-type {
-									border-right: 0;
-								}
-
 
 				.content-wrap .head-wrap .menu li {
 					background-size: auto 40px;
@@ -1504,7 +1442,8 @@ img {
 	padding-top: 7%;
 }
 
-	.simple-wrap h1 {
+	.simple-wrap:before {
+		content: 'почему может не хватать этих витаминов?';
 		font-family: 'Scada', sans-serif;
 		color: #ed1c24;
 		font-size: 55px;
@@ -1534,175 +1473,7 @@ img {
 
 
 
-/************************QUESTION AND ANSWER ********************************/
 
-.content-wrap .question {
-		height: 78%;
-		position: relative;
-		padding-top: 4%;
-	}
-
-.content-wrap .question .scrolled {
-		margin:0 150px 60px 150px;
-		height: 730px;
-		overflow: auto;
-	}
-
-.content-wrap .question .description {
-		padding-left: 0px;
-		list-style: none;
-		margin:0;
-	}
-
-	.content-wrap .question .description ol,
-	.content-wrap .question .description ul{
-		font-family: "Istok Web", sans-serif;
-	}
-
-	.content-wrap .question .show {
-		font-family: "Scada", sans-serif;
-		color: #ed2324;
-		font-size: 24px;
-		cursor: pointer;
-		margin-bottom: 10px;
-		font-weight: bold;
-	}
-
-	.content-wrap .question .hidden {
-		font-family: "Istok Web", sans-serif;
-		line-height: 22px;
-		color: #231f20;
-		font-size: 20px;
-		display: none;
-		margin-bottom: 20px;
-		margin-top: 20px;
-	}
-
-	.content-wrap .question .hidden.active {
-		display: block;
-	}
-
-	.content-wrap .question .hidden table {
-			margin-left: 2px;
-		}
-
-			.content-wrap .question .hidden table td {
-				padding: 5px;
-				border: 1px solid #ed2324;
-				 
-			}
-/************************QUESTION AND ANSWER - END****************************/
-
-
-
-/************************ARTICLE ********************************/
-
-.content-wrap .article {
-		height: 78%;
-		position: relative;
-		padding-top: 4%;
-	}
-
-.content-wrap .article .scrolled {
-		margin:0 150px 60px 150px;
-		height: 730px;
-		overflow: auto;
-	}
-
-	.content-wrap .article h3 {
-		color: #1d1d1b;
-		font-family: 'Istok Web', sans-serif;
-		font-weight: normal;
-		font-size: 20px;
-		line-height: 24px;
-	}
-
-	.content-wrap .article img {
-		width: 300px;
-		padding-left: 20px;
-	}
-
-	.content-wrap .article td {
-		vertical-align: top;
-	}
-
-	.content-wrap .article td.title {
-		font-family: 'Scada', sans-serif;
-		font-weight: bolder;
-		font-size: 34px;	
-		padding-left: 60px;
-		padding-right: 40px; 
-	}
-
-		.content-wrap .article td.title a {
-			color:  #ed2324;
-			text-decoration: none; 
-		}
-
-	.content-wrap .article td.desc {
-		color:  #1d1d1b;
-		font-family: 'Istok Web', sans-serif;
-		font-size: 20px;
-		line-height: 20px;	
-		padding-left: 60px;
-		padding-right: 40px; 
-	}
-
-	.content-wrap .article td.image {
-		
-	}
-
-	.question-panel {
-		background: #ffd8d6;
-		width: 250px;
-		border-top-right-radius: 15px;
-		border-bottom-right-radius: 15px;
-		padding: 25px;
-		position: absolute;
-		top: 30%;
-		left: 0;
-		z-index: 100;
-
-		-moz-box-shadow: 0 0 30px 1px #a8a8a8;
-		  -webkit-box-shadow: 0 0 30px 1px #a8a8a8;
-		  box-shadow: 0 0 30px 1px #a8a8a8;
-	}
-
-		
-		.question-panel .txt {
-			position: absolute;
-			right: 5px;
-			top: 5px;
-			width: 20px;
-		}
-/************************ARTICLE - END****************************/
-
-
-
-
-
-
-/********************SCROLLBAR******************/
-.mCS-lavita.mCSB_scrollTools{width: 20px;}
-.mCS-lavita.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #fdb5a7; }
-.mCS-lavita.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff1ec; }
-
-.mCS-lavita.mCSB_scrollTools .mCSB_buttonUp {
-	background-color: #e52919;
-	background-image: url('/images/scroll-triangle-up.png');
-	background-position: 50% 35%;
-	background-repeat: no-repeat;
-	border-radius: 7px;
-}
-
-.mCS-lavita.mCSB_scrollTools .mCSB_buttonDown {
-	background-color: #e52919;
-	background-image: url('/images/scroll-triangle-down.png');
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	border-radius: 7px;
-}
-/********************SCROLLBAR - END**************/
 
 
 
