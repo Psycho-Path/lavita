@@ -1501,17 +1501,16 @@ img {
 	width: 78.5%;
 	margin:0 auto;
 	position: relative;
-	padding-top: 7%;
+	/*padding-top: 7%;*/
 }
 
 	.simple-wrap h1 {
 		font-family: 'Scada', sans-serif;
 		color: #ed1c24;
 		font-size: 55px;
-		position: absolute;
-		top: 42px;
-		left: -72px;
 		text-transform: uppercase;
+		position: relative;
+		left: -72px;
 	}
 
 	.simple-wrap h2 {
@@ -1668,7 +1667,7 @@ img {
 		  box-shadow: 0 0 30px 1px #a8a8a8;
 	}
 
-		
+
 		.question-panel .txt {
 			position: absolute;
 			right: 5px;
@@ -1701,6 +1700,13 @@ img {
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	border-radius: 7px;
+}
+.typical .scrolled {
+	height: 730px;
+	overflow: auto;
+	width: 82%;
+	margin: 0 auto;
+	margin-top: 50px;
 }
 /********************SCROLLBAR - END**************/
 

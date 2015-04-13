@@ -22,6 +22,7 @@ class sectionsActions extends sfActions
      */
     public function executeIndex(sfWebRequest $request)
     {
+        $this->getContext()->getUser()->setAttribute('back_url', $request->getUri());
 
         $this->sections = null;
         $this->path = null;
@@ -122,7 +123,7 @@ class sectionsActions extends sfActions
       if($request->getParameter("parent"))
           $this->getContext()->getUser()->setAttribute("parent_section_slug", $request->getParameter("parent"));
 
-      $this->getContext()->getUser()->setAttribute('back_url', $request->getReferer());
+//      $this->getContext()->getUser()->setAttribute('back_url', $request->getReferer());
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -150,7 +151,7 @@ class sectionsActions extends sfActions
 
   public function executeEdit(sfWebRequest $request)
   {
-      $this->getContext()->getUser()->setAttribute('back_url', $request->getReferer());
+//      $this->getContext()->getUser()->setAttribute('back_url', $request->getReferer());
       $this->getContext()->getUser()->setAttribute('parent_section_slug', null);
       $this->sectionId = $request->getParameter("id");
   }

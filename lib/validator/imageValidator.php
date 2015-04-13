@@ -21,7 +21,7 @@ class ImageValidator
      */
     public static function validateFile($fileName, $fileTampName, $type)
     {
-        if($type == self::kArticleType) {
+        if($type == self::kArticleType && $fileName && $fileTampName) {
             $filePath = self::kUploadDir . self::kImagesUploadDir . self::kArticleUploadDir . $fileName;
             $imageFileType = pathinfo($filePath, PATHINFO_EXTENSION);
             $check = getimagesize($fileTampName);

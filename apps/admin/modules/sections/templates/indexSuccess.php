@@ -22,7 +22,7 @@
                     foreach ($sections as $section):
                     ?>
                 <tr <?php if($counter%2==0) echo "class=\"even\"";?> >
-                    <td><a href="<?php echo url_for('sections/edit?id='.$section->getId()) ?>"><?php echo $section->getName() ?></a></td>
+                    <td><a href="<?php if($section->getParentId()): echo url_for('sections/edit?id='.$section->getId()); else: echo "#"; endif; ?>"><?php echo $section->getName() ?></a></td>
                     <td><a href="<?php echo url_for("@sections_level?slug=".($section->getSlug() ? $section->getSlug() :"first_level"));?>">Перейти</a></td>
                     <?php if($section->getType() == "WithHTMLContent" || $section->getType() == "WithUniqueContent"): ?>
                     <td><a href="<?php if($section->getContent()->getId() == 0): echo url_for("content/new?section_id=".$section->getId()); else: echo url_for("content/edit?id=".$section->getContent()->getId()); endif;?>">Перейти</a></td>

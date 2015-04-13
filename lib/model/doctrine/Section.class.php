@@ -101,7 +101,14 @@ class Section extends BaseSection
         $concreteSection = SectionTable::getInstance()->findOneBy(self::kIdKey, $identifier);
 
         if(count($concreteSection)>0)
+        {
+            $sectionsContent = ContentTable::getInstance()->findOneBy("section_id", $concreteSection->getId());
+            if(count($sectionsContent)>0)
+            {
+                $sectionsContent->delete();
+            }
             $concreteSection->delete();
+        }
     }
 
     /**

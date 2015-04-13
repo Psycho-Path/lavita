@@ -5,8 +5,10 @@
 #Общие роуты
 
 homepage:
+#  url:   /
+#  param: { module: start, action: index }
   url:   /
-  param: { module: start, action: index }
+  param: { module: sections, action: index }
 
 error:
   url: /error

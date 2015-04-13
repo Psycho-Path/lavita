@@ -3,7 +3,7 @@
 <?php use_javascript("scrollbar.init.js");?>
 
 <div class="wrap">
-    <div class="content-wrap">
+    <div class="content-wrap typical">
         <div class="head-wrap">
             <img class="logo" src="/images/logo.png">
             <ul class="menu">
@@ -28,7 +28,7 @@
             <img class="hearts1" src="/images/hearts1.png">
             <img class="hearts2" src="/images/hearts2.png">
         </div>
-        <div class="scrolled" style="height: 730px; overflow: auto;">
+        <div class="scrolled">
             <div class="simple-wrap">
                 <h1><?php echo $currentSection->getName();?></h1>
                 <?php echo $sf_data->getRaw('html');?>
